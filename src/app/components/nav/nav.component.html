@@ -1,12 +1,38 @@
-<nav class="navbar">
-    <div class="inner-container">
-        <div class="nav-flex">
+<nav ngClass="navbar">
+    <div ngClass="inner-container">
+        <div ngClass="nav-flex nav-desktop">
             <a routerLink="/"><img class="nav-logo" src="../../../assets/logos/Natsmart.svg" alt="Nätsmart"></a>
-            <div class="links-flex">
-                <a routerLink="/" class="">Snabbkurser</a>
-                <a routerLink="/articles" class="">Artiklar</a>
-                <a routerLink="/" class="">Verktyg</a>
+            <div ngClass="links-flex">
+                <a routerLink="/snabbkurser" class="">Snabbkurser</a>
+                <a routerLink="/artiklar" class="">Artiklar</a>
+                <a routerLink="/verktyg" class="">Verktyg</a>
             </div>
         </div>
+    </div>
+    
+    <div ngClass="nav-flex nav-mobile">
+        <div #navHighlight [ngClass]="['nav-mobile-highlight',
+  router.isActive('/', true) ? 'highlight-pos1' : '',
+  router.isActive('/snabbkurser', true) ? 'highlight-pos2' : '',
+  router.isActive('/artiklar', true) ? 'highlight-pos3' : '',
+  router.isActive('/verktyg', true) ? 'highlight-pos4' : '']"></div>
+
+
+        <a routerLink="/" ngClass="mobile-link" >
+            <img ngClass="nav-mobile-icon" src="../../../assets/icons/home-smile.svg" alt="">
+            <p>Hem</p>
+        </a>
+        <a routerLink="/snabbkurser" ngClass="mobile-link">
+            <img ngClass="nav-mobile-icon" src="../../../assets/icons/pages-fill.svg" alt="">
+            <p>Snabbkurser</p>
+        </a>
+        <a routerLink="/artiklar" ngClass="mobile-link">
+            <img ngClass="nav-mobile-icon" src="../../../assets/icons/article-fill.svg" alt="">
+            <p>Artiklar</p>
+        </a>
+        <a routerLink="/verktyg" ngClass="mobile-link">
+            <img ngClass="nav-mobile-icon" src="../../../assets/icons/mobile-download-fill.svg" alt="">
+            <p>Verktyg</p>
+        </a>
     </div>
 </nav>
