@@ -27,7 +27,7 @@ export class LandingComponent {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    this.shine = 200 - window.scrollY /2 + 'rem'
+    this.shine = 200 - (window.scrollY/3) + 'rem'
   }
 
   @HostListener('window:resize', ['$event'])
