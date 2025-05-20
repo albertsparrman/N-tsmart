@@ -1,0 +1,27 @@
+.navbar {
+    background-color: var(--color-dark);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-flex {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 1.5em 0em;
+}
+
+.nav-logo {
+    width: 10rem;
+}
+
+.links-flex {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+a {
+    color: var(--color-light-text);
+}

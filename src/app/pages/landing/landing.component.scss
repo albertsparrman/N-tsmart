@@ -1,0 +1,87 @@
+#background {
+    background-color: var(--color-dark);
+     background: linear-gradient(var(--color-dark) 10%, #1c206b);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+button {
+    position: absolute;
+    z-index: 20;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-text {
+    padding-top: 32vh;
+    text-align: center;
+    color: var(--color-light-text);
+}
+
+.hero-text h1 {
+    font-family: "Bakbak One", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0.2rem 0 1rem;
+}
+
+@keyframes header {}
+
+.hero-background {
+    position: relative;
+    width: 25rem;
+    max-width: 80%;
+    margin: auto;
+}
+
+.hero-computer {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.hero-computer-shine {
+    position: absolute;
+    left: 50%;
+    top: 1.4rem;
+    transform: translate(-50%);
+    width: 1200%;
+    height: 200rem;
+    transition: 1s;
+
+}
+
+.hero-man-and-son {
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    transform: translate(-50%);
+    width: 75%;
+}
+
+
+
+
+.hallå {
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+    text-align: center;
+    color: var(--color-light-text);
+
+}
+
+.hallå h2 {
+    margin: 0;
+}
+
+.hallå2 {
+    background-color: #1975FF4D;
+}
