@@ -1,0 +1,122 @@
+.header {
+    padding-top: 8rem;
+}
+
+.select-age {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.label-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 6rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    background-color: var(--color-light-text);
+    transition: 0.3s;
+}
+
+.label-checkbox p {
+    font-weight: 600;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.label-checkbox:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.label-checkbox:active {
+    cursor: pointer;
+    transition: 0.1s;
+    transform: scale(1);
+}
+
+.checkbox {
+    width: 1rem;
+    height: 1rem;
+    background: var(--color-light-text);
+    border-radius: 0.2rem;
+    padding: 0rem;
+    border: solid var(--color-dark) 0.15rem;
+    display: flex;
+    transition: 0.3s, padding 0s, border 0s;
+}
+
+.checkbox-icon {
+    width: 100%;
+    scale: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    transition: 0.3s;
+}
+
+#threeToSix:checked+ {
+    .label-checkbox {
+        background-color: #2E78BD;
+        color: var(--color-light-text);
+    }
+
+    .label-checkbox>.checkbox {
+        padding: 0.16rem;
+        border: none;
+    }
+
+    .label-checkbox>.checkbox>.checkbox-icon {
+        scale: 1;
+    }
+}
+
+#sevenToTen:checked+ {
+    .label-checkbox {
+        background-color: #2E78BD;
+        color: var(--color-light-text);
+    }
+
+    .label-checkbox>.checkbox {
+        padding: 0.16rem;
+        border: none;
+    }
+
+    .label-checkbox>.checkbox>.checkbox-icon {
+        scale: 1;
+    }
+}
+
+
+#elevenToFourteen:checked+ {
+    .label-checkbox {
+        background-color: #2E78BD;
+        color: var(--color-light-text);
+    }
+
+    .label-checkbox>.checkbox {
+        padding: 0.16rem;
+        border: none;
+    }
+
+    .label-checkbox>.checkbox>.checkbox-icon {
+        scale: 1;
+    }
+}
+
+#fifteenToSeventeen:checked+ {
+    .label-checkbox {
+        background-color: #2E78BD;
+        color: var(--color-light-text);
+    }
+
+    .label-checkbox>.checkbox {
+        padding: 0.16rem;
+        border: none;
+    }
+
+    .label-checkbox>.checkbox>.checkbox-icon {
+        scale: 1;
+    }
+}

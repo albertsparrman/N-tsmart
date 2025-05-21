@@ -1,7 +1,11 @@
 :root {
     --color-dark: #171426;
     --color-light: #CADAF2;
-    --color-light-text: #FFFFFF;
+    --color-light-text: #FAFAFA;
+}
+
+html {
+    font-size: 16px;
 }
 
 main,
@@ -9,6 +13,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+    background-color: var(--color-light);
+    color: var(--color-dark);
 }
 
 h1,h2,h3,h4,h5,h6,a,p {
@@ -22,14 +28,19 @@ h2 {
     font-weight: 400;
 }
 
-a {
+a, p {
     text-decoration: none;
+    font-weight: 500;
 }
 
 .inner-container {
     max-width: 1748px;
     margin: 0 auto;
     padding: 0 5rem;
+}
+
+.dp-none {
+    display: none;
 }
 
 @media (max-width: 784px) {
