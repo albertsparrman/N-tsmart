@@ -3,7 +3,8 @@
 }
 
 .select-age {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     gap: 0.5rem;
 }
 
@@ -11,7 +12,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 6rem;
     padding: 1rem;
     border-radius: 0.6rem;
     background-color: var(--color-light-text);
