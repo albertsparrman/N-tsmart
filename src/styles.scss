@@ -31,10 +31,11 @@ h2 {
 a, p {
     text-decoration: none;
     font-weight: 500;
+    color: inherit;
 }
 
 .inner-container {
-    max-width: 1748px;
+    max-width: 1248px;
     margin: 0 auto;
     padding: 0 5rem;
 }
