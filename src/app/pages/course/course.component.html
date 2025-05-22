@@ -1,1 +1,12 @@
-<p>course works!</p>
+<app-nav></app-nav>
+
+<header ngClass="header">
+    <div ngClass="inner-container">
+        <h1>{{ name }}</h1>
+    </div>
+</header>
+
+<section ngClass="inner-container">
+    <h2 *ngIf="id && coursesData">{{ coursesData[id].content[0].title }}</h2>
+    <p *ngIf="id && coursesData">{{ coursesData[id].content[0].text }}</p>
+</section>

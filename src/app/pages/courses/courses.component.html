@@ -17,7 +17,7 @@
     <form ngClass="select-age" (ngSubmit)="checkform()" #gfgform="ngForm">
         <input ngClass="dp-none" type="checkbox" id="threeToSix" checked name="threeToSix" ngModel>
         <label for="threeToSix" ngClass="label-checkbox">
-            <p draggable="false" >3-6 år</p>
+            <p draggable="false">3-6 år</p>
             <div ngClass="checkbox">
                 <img draggable="false" ngClass="checkbox-icon" src="../../../assets/icons/check-blue.svg" alt="">
             </div>
@@ -25,7 +25,7 @@
 
         <input ngClass="dp-none" type="checkbox" id="sevenToTen" checked name="sevenToTen" ngModel>
         <label for="sevenToTen" ngClass="label-checkbox">
-            <p draggable="false" >7-10 år</p>
+            <p draggable="false">7-10 år</p>
             <div ngClass="checkbox">
                 <img draggable="false" ngClass="checkbox-icon" src="../../../assets/icons/check-blue.svg" alt="">
             </div>
@@ -33,35 +33,41 @@
 
         <input ngClass="dp-none" type="checkbox" id="elevenToFourteen" checked name="elevenToFourteen" ngModel>
         <label for="elevenToFourteen" ngClass="label-checkbox">
-            <p draggable="false" >11-14 år</p>
+            <p draggable="false">11-14 år</p>
             <div ngClass="checkbox">
                 <img draggable="false" ngClass="checkbox-icon" src="../../../assets/icons/check-blue.svg" alt="">
             </div>
         </label>
-        
 
-         <input ngClass="dp-none" type="checkbox" id="fifteenToSeventeen" checked name="fifteenToSeventeen" ngModel>
+
+        <input ngClass="dp-none" type="checkbox" id="fifteenToSeventeen" checked name="fifteenToSeventeen" ngModel>
         <label for="fifteenToSeventeen" ngClass="label-checkbox">
-            <p draggable="false" >15-17 år</p>
+            <p draggable="false">15-17 år</p>
             <div ngClass="checkbox">
                 <img draggable="false" ngClass="checkbox-icon" src="../../../assets/icons/check-blue.svg" alt="">
             </div>
         </label>
     </form>
 
-    <div *ngIf="gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">Alla artiklar</div>
+    <div
+        *ngIf="gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
+        Alla artiklar</div>
 
-        <div *ngIf="gfgform.value.threeToSix == true">3-6</div>
+    <div *ngIf="gfgform.value.threeToSix == true">3-6</div>
 
-        <div *ngIf="gfgform.value.sevenToTen == true">7-10</div>
+    <div *ngIf="gfgform.value.sevenToTen == true">7-10</div>
 
-        <div *ngIf="gfgform.value.elevenToFourteen == true">11-14</div>
+    <div *ngIf="gfgform.value.elevenToFourteen == true">11-14</div>
 
-        <div *ngIf="gfgform.value.fifteenToSeventeen == true">15-17</div>
+    <div *ngIf="gfgform.value.fifteenToSeventeen == true">15-17</div>
 
     <div ngClass="courses-grid">
-        <app-course-card></app-course-card>
-        <app-course-card></app-course-card>
-        <app-course-card></app-course-card>
+
+        <div *ngFor="let course of coursesData">
+            <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+        </div>
+        
     </div>
+
+    
 </section>
