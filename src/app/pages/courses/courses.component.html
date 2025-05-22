@@ -51,23 +51,81 @@
 
     <div
         *ngIf="gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        Alla artiklar</div>
-
-    <div *ngIf="gfgform.value.threeToSix == true">3-6</div>
-
-    <div *ngIf="gfgform.value.sevenToTen == true">7-10</div>
-
-    <div *ngIf="gfgform.value.elevenToFourteen == true">11-14</div>
-
-    <div *ngIf="gfgform.value.fifteenToSeventeen == true">15-17</div>
-
-    <div ngClass="courses-grid">
-
-        <div *ngFor="let course of coursesData">
-            <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+        <h3>3-6</h3>
+        <div ngClass="courses-grid">
+            <div *ngFor="let course of coursesData">
+                <div *ngIf="coursesData[course.id].age == '3-6'">
+                    <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+                </div>
+            </div>
         </div>
-        
+        <h3>7-10</h3>
+        <div ngClass="courses-grid">
+            <div *ngFor="let course of coursesData">
+                <div *ngIf="coursesData[course.id].age == '7-10'">
+                    <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+                </div>
+            </div>
+        </div>
+        <h3>11-14</h3>
+        <div ngClass="courses-grid">
+            <div *ngFor="let course of coursesData">
+                <div *ngIf="coursesData[course.id].age == '11-14'">
+                    <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+                </div>
+            </div>
+        </div>
+        <h3>15-17</h3>
+        <div ngClass="courses-grid">
+            <div *ngFor="let course of coursesData">
+                <div *ngIf="coursesData[course.id].age == '15-17'">
+                    <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    
+    <div *ngIf="gfgform.value.threeToSix == true">
+        <h3>3-6</h3>
+        <div ngClass="courses-grid">
+            <div *ngFor="let course of coursesData">
+                <div *ngIf="coursesData[course.id].age == '3-6'">
+                    <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="gfgform.value.sevenToTen == true">
+        <h3>7-10</h3>
+        <div ngClass="courses-grid">
+            <div *ngFor="let course of coursesData">
+                <div *ngIf="coursesData[course.id].age == '7-10'">
+                    <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="gfgform.value.elevenToFourteen == true">
+        <h3>11-14</h3>
+        <div ngClass="courses-grid">
+            <div *ngFor="let course of coursesData">
+                <div *ngIf="coursesData[course.id].age == '11-14'">
+                    <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="gfgform.value.fifteenToSeventeen == true">
+        <h3>15-17</h3>
+        <div ngClass="courses-grid">
+            <div *ngFor="let course of coursesData">
+                <div *ngIf="coursesData[course.id].age == '15-17'">
+                    <a routerLink="/snabbkurser/{{course.id}}/{{course.name}}">{{ course.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
