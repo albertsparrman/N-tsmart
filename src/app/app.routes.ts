@@ -10,5 +10,7 @@ export const routes: Routes = [
     {path: 'artiklar', component: ArticlesComponent, title: "Nätsmart - Artiklar"},
     {path: 'verktyg', component: ArticlesComponent, title: "Nätsmart - Verktyg"},
 
-    {path:'snabbkurser/:id/:name', component: CourseComponent, title: "Nätsmart"}
+    {path:'snabbkurser/:name/:id', component: CourseComponent, title: "Nätsmart"},
+
+    {path: '**', component: LandingComponent, title: "Nätsmart"}
 ];

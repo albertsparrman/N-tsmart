@@ -3,6 +3,7 @@ import { NavComponent } from '../../components/nav/nav.component';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-course',
@@ -18,9 +19,8 @@ export class CourseComponent {
   coursesData: any;
   url: string = '../../../assets/courses.json'
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {
+  constructor(private route: ActivatedRoute, private http: HttpClient, private titleService: Title) {}
 
-  }
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.name = params['name']
@@ -31,5 +31,11 @@ export class CourseComponent {
       this.coursesData = res;
       console.log(this.coursesData);
     })
+
+    setTimeout(() => {
+       if (this.id) {
+      this.titleService.setTitle("Nätsmart - " + this.coursesData[this.id].name)
+    }
+    }, 100);
   }
 }
