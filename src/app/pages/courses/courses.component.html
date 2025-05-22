@@ -49,8 +49,7 @@
         </label>
     </form>
 
-    <div ngClass="courses-grid">
-        <div *ngIf="gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">Alla artiklar</div>
+    <div *ngIf="gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">Alla artiklar</div>
 
         <div *ngIf="gfgform.value.threeToSix == true">3-6</div>
 
@@ -59,5 +58,10 @@
         <div *ngIf="gfgform.value.elevenToFourteen == true">11-14</div>
 
         <div *ngIf="gfgform.value.fifteenToSeventeen == true">15-17</div>
+
+    <div ngClass="courses-grid">
+        <app-course-card></app-course-card>
+        <app-course-card></app-course-card>
+        <app-course-card></app-course-card>
     </div>
 </section>

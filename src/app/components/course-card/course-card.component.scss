@@ -1,0 +1,38 @@
+.course-card {
+    border-radius: 0.5em;
+    background-color: var(--color-light-text);
+    overflow: hidden;
+}
+
+.course-card-image {
+    height: 14rem;
+    width: 100%;
+    background-color: #E8E0DE;
+}
+
+.course-card-inner-container {
+    padding: 1em;
+    padding-top: 0.5em;
+}
+
+.course-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.time-icon {
+    width: 1.5em;
+}
+
+.course-name {
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+}

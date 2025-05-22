@@ -1,1 +1,16 @@
-<p>course-card works!</p>
+<a routerLink="{{ courseLink }}">
+    <article ngClass="course-card">
+        <img ngClass="course-card-image" src="{{ imageLink }}" alt="">
+        <div ngClass="course-card-inner-container">
+            <div ngClass="course-card-info">
+                <p>Snabbkurs</p>
+                <div ngClass="time">
+                    <img ngClass="time-icon" src="../../../assets/icons/clock.svg" alt="">
+                    <p>{{ time }} min</p>
+                </div>
+            </div>
+            <h4 ngClass="course-name">{{ courseName }}</h4>
+            <a routerLink="{{ courseLink }}">Till kursen</a>
+        </div>
+    </article>
+</a>

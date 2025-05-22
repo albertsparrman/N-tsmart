@@ -4,8 +4,9 @@
 
 .select-age {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     gap: 0.5rem;
+    max-width: 60em;
 }
 
 .label-checkbox {
@@ -27,12 +28,12 @@
 
 .label-checkbox:hover {
     cursor: pointer;
-    transform: scale(1.07);
+    transform: scale(1.02);
 }
 
 .label-checkbox:active {
     cursor: pointer;
-    transition: 0.1s;
+    transition: 0.15s;
     transform: scale(1);
 }
 
@@ -119,4 +120,11 @@
     .label-checkbox>.checkbox>.checkbox-icon {
         scale: 1;
     }
+}
+
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
 }
