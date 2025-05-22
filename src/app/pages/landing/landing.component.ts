@@ -31,7 +31,7 @@ export class LandingComponent implements AfterViewInit {
     /*     this.shine = 150 - (window.scrollY/(1 + this.screenHeight/100)) + 'vw'
         console.log(window.scrollY/(1 + this.screenHeight/100));
          */
-    if (window.scrollY >= this.section2?.nativeElement.offsetTop) {
+    if (window.scrollY >= this.section2?.nativeElement.offsetTop - 150) {
       this.backgroundColor = 'var(--color-light)'
       this.color = 'var(--color-dark)'
     }
