@@ -19,7 +19,7 @@ export class CourseComponent {
   coursesData: any;
   url: string = '../../../assets/courses.json'
 
-  constructor(private route: ActivatedRoute, private http: HttpClient, private titleService: Title) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient, private titleService: Title) { }
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
@@ -29,13 +29,12 @@ export class CourseComponent {
 
     this.http.get(this.url).subscribe(res => {
       this.coursesData = res;
-      console.log(this.coursesData);
     })
 
     setTimeout(() => {
-       if (this.id) {
-      this.titleService.setTitle("Nätsmart - " + this.coursesData[this.id].name)
-    }
+      if (this.id) {
+        this.titleService.setTitle("Nätsmart - " + this.coursesData[this.id].name)
+      }
     }, 100);
   }
 }

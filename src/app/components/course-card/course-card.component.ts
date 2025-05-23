@@ -22,7 +22,6 @@ export class CourseCardComponent {
   ngOnInit() {
     this.http.get(this.url).subscribe(res => {
       this.coursesData = res;
-      console.log(this.coursesData);
     })
   }
 
