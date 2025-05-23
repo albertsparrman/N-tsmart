@@ -6,7 +6,10 @@
     </div>
 </header>
 
-<section ngClass="inner-container">
-    <h2 *ngIf="id && coursesData">{{ coursesData[id].content[0].title }}</h2>
-    <p *ngIf="id && coursesData">{{ coursesData[id].content[0].text }}</p>
+<section *ngIf="id && coursesData" ngClass="inner-container">
+    <div *ngFor="let contentId of coursesData[id].content; index as i">
+        <h2 *ngIf="coursesData[id].content[i].title != null">{{ coursesData[id].content[i].title }}</h2>
+        <h3 *ngIf="coursesData[id].content[i].subtitle != null">{{ coursesData[id].content[i].subtitle }}</h3>
+        <p *ngIf="coursesData[id].content[i].text != null">{{ coursesData[id].content[i].text }}</p>
+    </div>
 </section>
