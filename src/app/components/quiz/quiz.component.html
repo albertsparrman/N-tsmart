@@ -1,3 +1,65 @@
+<!-- <br>
 <p>quiz works!</p>
+<br>
 
-<button (click)="onSave()">Save</button>
+
+<form ngClass="quiz" *ngIf="id && this.quizSection < this.coursesData[this.id].quiz">
+    <ng-container *ngFor="let quiz of coursesData[id].quiz[quizSection].quizOptions ">
+        <input ngClass="" (change)="checkAnswer(quiz.correctAnswer)" type="radio" name="Quiz" id="{{quiz.quizId}}"
+            [disabled]="quizLocked" [checked]="!resetSelections">
+        <label
+            [ngClass]="{'label-checkbox': true, 'label-correct': submittedAnswer == quiz.quizId && isAnswerCorrect , 'label-incorrect': submittedAnswer == quiz.quizId && !isAnswerCorrect}"
+            for="{{quiz.quizId}}" (click)="lockQuiz(true, quiz.quizId)">
+            <p>{{quiz.option}}</p>
+            <div ngClass="checkbox">
+                <img *ngIf=" submittedAnswer == quiz.quizId && isAnswerCorrect" ngClass="checkbox-icon"
+                    src="../../../assets/icons/check-green.svg" alt="">
+                <img *ngIf=" submittedAnswer == quiz.quizId && !isAnswerCorrect" ngClass="checkbox-icon"
+                    src="../../../assets/icons/cross-red.svg" alt="">
+            </div>
+        </label>
+    </ng-container>
+</form>
+
+<div *ngIf="id && quizLocked && this.quizSection < this.coursesData[this.id].quiz">
+    <h2>Rätt svar</h2>
+    <p>{{ coursesData[id].quiz[quizSection].quizAnswer }}</p>
+</div>
+
+<button (click)="nextQuestion()">Nästa fråga</button> -->
+
+<div *ngIf="quizId && coursesData != undefined && coursesData[quizId].quiz != undefined">
+    <div *ngIf="quizSection < coursesData[quizId].quiz.length">
+        <p>Fråga {{ quizSection + 1 }}/{{coursesData[quizId].quiz.length}}</p>
+        <h3>
+            {{ coursesData[quizId].quiz[quizSection].quizQuestion }}
+        </h3>
+        <div>
+            <button (click)="submitAnswer(quiz.quizId, quiz.correctAnswer)"
+                *ngFor="let quiz of coursesData[quizId].quiz[quizSection].quizOptions" id="{{quiz.quizId}}"
+                [ngClass]="{'label-checkbox': true, 'label-correct': submittedAnswer == quiz.quizId && quiz.correctAnswer, 'label-incorrect': submittedAnswer == quiz.quizId && !quiz.correctAnswer}">
+
+                {{ quiz.option }}
+
+                <div ngClass="checkbox">
+                    <img *ngIf=" submittedAnswer == quiz.quizId && isAnswerCorrect" ngClass="checkbox-icon"
+                        src="../../../assets/icons/check-green.svg" alt="">
+                    <img *ngIf=" submittedAnswer == quiz.quizId && !isAnswerCorrect" ngClass="checkbox-icon"
+                        src="../../../assets/icons/cross-red.svg" alt="">
+                </div>
+            </button>
+        </div>
+        <div>
+            <h3>Rätt svar</h3>
+            <p>{{ coursesData[quizId].quiz[quizSection].quizAnswer }}</p>
+        </div>
+        <button (click)="nextQuestion()">
+            Nästa fråga
+        </button>
+    </div>
+
+    <div *ngIf="quizSection >= coursesData[quizId].quiz.length">
+        <h3>Quiz klart</h3>
+        {{ correctAnswers + '/' + coursesData[quizId].quiz.length }}
+    </div>
+</div>

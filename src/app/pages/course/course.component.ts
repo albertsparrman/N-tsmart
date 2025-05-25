@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Title } from '@angular/platform-browser';
+import { QuizComponent } from '../../components/quiz/quiz.component';
 
 @Component({
   selector: 'app-course',
   standalone: true,
-  imports: [NavComponent, CommonModule, HttpClientModule],
+  imports: [NavComponent, CommonModule, HttpClientModule, QuizComponent],
   templateUrl: './course.component.html',
   styleUrl: './course.component.scss'
 })

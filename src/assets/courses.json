@@ -13,6 +13,60 @@
                 "subtitle": "Undertitel",
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
             }
+        ],
+        "quiz": [
+            {
+                "quizQuestion": "Fråga 1",
+                "quizOptions": [
+                    {
+                        "quizId": "option1",
+                        "option": "Exempel1",
+                        "correctAnswer": false
+                    },
+                    {
+                        "quizId": "option2",
+                        "option": "Exempel2",
+                        "correctAnswer": true
+                    },
+                    {
+                        "quizId": "option3",
+                        "option": "Exempel3",
+                        "correctAnswer": false
+                    },
+                    {
+                        "quizId": "option4",
+                        "option": "Exempel4",
+                        "correctAnswer": false
+                    }
+                ],
+                "quizAnswer": "Korrekt svar"
+            },
+            {
+                "quizQuestion": "Fråga 2",
+                "quizOptions": [
+                    {
+                        "quizId": "option1",
+                        "option": "quiz2",
+                        "correctAnswer": false
+                    },
+                    {
+                        "quizId": "option2",
+                        "option": "Exempel2",
+                        "correctAnswer": true
+                    },
+                    {
+                        "quizId": "option3",
+                        "option": "Exempel3",
+                        "correctAnswer": false
+                    },
+                    {
+                        "quizId": "option4",
+                        "option": "Exempel4",
+                        "correctAnswer": false
+                    }
+                ],
+                "quizAnswer": "Korrekt svar"
+            }
         ]
     },
     {
@@ -40,10 +94,6 @@
             {
                 "title": "En tredje Titel",
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
-            },
-            {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
             }
         ]
     },
@@ -54,25 +104,10 @@
         "age": "3-6",
         "content": [
             {
-                "title": "En tredje Titel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
-            },
-            {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "title": "Exempel"
             }
         ]
     },
-
-
-
-
-
-
-
-
-
-
     {
         "id": "4",
         "name": "Exempel 2",
@@ -80,12 +115,7 @@
         "age": "7-10",
         "content": [
             {
-                "title": "Annan Titel",
-                "text": "Den andra Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
-            },
-            {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "title": "Exempel"
             }
         ]
     },
@@ -96,12 +126,7 @@
         "age": "7-10",
         "content": [
             {
-                "title": "Annan Titel",
-                "text": "Den andra Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
-            },
-            {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "title": "Exempel"
             }
         ]
     },
@@ -112,12 +137,7 @@
         "age": "7-10",
         "content": [
             {
-                "title": "Annan Titel",
-                "text": "Den andra Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
-            },
-            {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "title": "Exempel"
             }
         ]
     },
@@ -128,25 +148,10 @@
         "age": "7-10",
         "content": [
             {
-                "title": "Annan Titel",
-                "text": "Den andra Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
-            },
-            {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "title": "Exempel"
             }
         ]
     },
-
-
-
-
-
-
-
-
-
-
     {
         "id": "8",
         "name": "Exempel 3",
@@ -154,25 +159,10 @@
         "age": "11-14",
         "content": [
             {
-                "title": "En tredje Titel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
-            },
-            {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "title": "Exempel"
             }
         ]
     },
-
-
-
-
-
-
-
-
-
-
     {
         "id": "9",
         "name": "Exempel 3",
@@ -180,12 +170,7 @@
         "age": "15-17",
         "content": [
             {
-                "title": "En tredje Titel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
-            },
-            {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "title": "Exempel"
             }
         ]
     }

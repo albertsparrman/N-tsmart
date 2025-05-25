@@ -1,0 +1,83 @@
+.quiz {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 0.5rem;
+    max-width: 60em;
+}
+
+.label-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    background-color: var(--color-light-text);
+    transition: 0.3s;
+}
+
+.label-correct {
+    color: var(--color-light-text);
+    background-color: rgb(16, 255, 92);
+}
+
+.label-incorrect {
+    color: var(--color-light-text);
+    background-color: rgb(255, 0, 0);
+}
+
+
+.label-checkbox p {
+    font-weight: 600;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.label-checkbox:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.label-checkbox:active {
+    cursor: pointer;
+    transition: 0.15s;
+    transform: scale(1);
+}
+
+.checkbox {
+    width: 1rem;
+    height: 1rem;
+    background: var(--color-light-text);
+    border-radius: 0.2rem;
+    padding: 0rem;
+    border: solid var(--color-dark) 0.15rem;
+    display: flex;
+    transition: 0.3s, padding 0s, border 0s;
+}
+
+.checkbox-icon {
+    width: 100%;
+    scale: 1;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    animation: showIcon 0.3s;
+}
+
+@keyframes showIcon {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.label-incorrect,
+.label-correct {
+    .checkbox {
+        padding: 0.1rem;
+        border: none;
+    }
+}

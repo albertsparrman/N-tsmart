@@ -13,3 +13,7 @@
         <p *ngIf="coursesData[id].content[i].text != null">{{ coursesData[id].content[i].text }}</p>
     </div>
 </section>
+
+<section ngClass="inner-container">
+    <app-quiz [id]="id"></app-quiz>
+</section>
