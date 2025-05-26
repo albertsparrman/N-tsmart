@@ -2,6 +2,11 @@
     --color-dark: #171426;
     --color-light: #CADAF2;
     --color-light-text: #F1F1F1;
+    --color-accent: #4D7FCC;
+
+    --border-radius-small: 0.2em;
+    --border-radius-medium: 0.6em;
+    --border-radius-large: ;
 }
 
 html {
@@ -33,6 +38,18 @@ h1,
 h2 {
     font-family: "Bakbak One", sans-serif;
     font-weight: 400;
+    font-size: 2.2em;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
 }
 
 a,
@@ -40,7 +57,69 @@ p {
     text-decoration: none;
     font-weight: 500;
     color: inherit;
+    font-size: 1em;
 }
+
+p {
+    line-height: 150%;
+}
+
+.text-container {
+    padding-bottom: 4em;
+
+    h1,
+    h2 {
+        padding-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        padding-bottom: 1em;
+        font-size: 1.1em;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-top: 0.8em;
+        margin-bottom: 0.4em;
+    }
+}
+
+
+.text-container-landing {
+
+    h1,
+    h2 {
+        padding-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        padding-bottom: 1em;
+        font-size: 1.1em;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 0.8em;
+    }
+
+    section {
+        margin-bottom: 5em;
+    }
+}
+
 
 button {
     appearance: none;
@@ -58,17 +137,39 @@ button {
 
 
 .inner-container {
-    max-width: 1248px;
+    max-width: 1428px;
     margin: 0 auto;
-    padding: 0 5rem;
+    padding: 0 6em;
 }
 
 .dp-none {
     display: none;
 }
 
+
+.button {
+    margin-bottom: 2em;
+    background-color: var(--color-accent);
+    color: var(--color-light-text);
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 0.3em var(--color-dark);
+    transition: 0.2s;
+}
+
+.button:hover {
+    margin-top: -0.15em;
+    box-shadow: 0 0.45em var(--color-dark);
+}
+
+.button:active {
+    margin-top: 0.15em;
+    box-shadow: 0 0.15em var(--color-dark);
+}
+
 @media (max-width: 784px) {
     .inner-container {
-        padding: 0 2rem;
+        padding: 0 2em;
     }
 }

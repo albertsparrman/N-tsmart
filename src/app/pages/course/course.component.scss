@@ -1,7 +1,26 @@
+header {
+    overflow-x: hidden;
+}
+
 .header {
     background-color: #E8E0DE;
     width: 100%;
     margin-left: -50%;
     padding: 14rem 50% 4rem 50%;
     border-radius: 0 0 50% 50%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.time {
+    margin-top: 0.8em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.time-icon {
+    width: 1.5em;
 }

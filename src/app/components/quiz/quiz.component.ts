@@ -34,36 +34,6 @@ export class QuizComponent implements OnInit {
       this.coursesData = res;
     })
   }
-  /* 
-    lockQuiz(lockQuiz: boolean, submittedAnswer: string) {
-  
-      this.resetSelections = false
-      if (this.quizLocked == false) {
-        this.submittedAnswer = submittedAnswer
-      }
-  
-      setTimeout(() => {
-        this.quizLocked = lockQuiz
-      }, 10);
-    }
-  
-    checkAnswer(correctAnswer: boolean) {
-      this.isAnswerCorrect = correctAnswer
-      if (this.isAnswerCorrect = correctAnswer) {
-        this.correctAnswers += 1
-        console.log(correctAnswer);
-      }
-    }
-  
-    nextQuestion() {
-      if (this.quizId && this.quizSection < this.coursesData[this.quizId].quiz.length) {
-        this.quizSection += 1
-      }
-      else {
-        console.log('quiz done');
-      }
-      this.resetSelections = true
-    } */
 
   submitAnswer(answerId: string, correctAnswer: boolean) {
     if (this.quizLocked == false) {

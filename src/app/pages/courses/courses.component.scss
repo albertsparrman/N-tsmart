@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    border-radius: 0.6rem;
+    border-radius: var(--border-radius-medium);
     background-color: var(--color-light-text);
     transition: 0.3s;
 }
@@ -41,7 +41,7 @@
     width: 1rem;
     height: 1rem;
     background: var(--color-light-text);
-    border-radius: 0.2rem;
+    border-radius: var(--border-radius-small);
     padding: 0rem;
     border: solid var(--color-dark) 0.15rem;
     display: flex;

@@ -1,5 +1,5 @@
 .course-card {
-    border-radius: 0.5em;
+    border-radius: var(--border-radius-medium);
     background-color: var(--color-light-text);
     overflow: hidden;
 }

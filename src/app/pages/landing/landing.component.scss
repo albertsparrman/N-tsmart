@@ -66,23 +66,136 @@ button {
     width: 75%;
 }
 
-
-
-
-.hallå {
-    margin-top: 8rem;
+.big-text {
+    padding-top: 0;
+    font-size: 4em;
 }
 
-.hallå h2 {
-    margin: 0;
+.FAQ-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
+    gap: 1em;
 }
+
+.FAQ {
+    margin-bottom: 1em;
+}
+
+.FAQ p {
+    padding: 0;
+}
+
+.FAQ-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-dark);
+    color: var(--color-light-text);
+    padding: 1em;
+    border-radius: var(--border-radius-medium);
+}
+
+.expand-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.4em;
+    background-color: var(--color-accent);
+    border-radius: 2em;
+    transition: transform 0.5s;
+}
+
+
+.expand-arrow img {
+    width: 1.2em;
+}
+
+#question1:checked+.FAQ>.FAQ-question>.expand-arrow,
+#question2:checked+.FAQ>.FAQ-question>.expand-arrow,
+#question3:checked+.FAQ>.FAQ-question>.expand-arrow {
+    transform: rotate(180deg);
+}
+
+.arrow-up {
+    position: absolute;
+    border-left: 0em solid transparent;
+    border-right: 0em solid transparent;
+    top: 0em;
+    left: 10%;
+    transform: translate(-50%);
+    border-bottom: 0em solid var(--color-light);
+    width: 0;
+    height: 0;
+    transition: 0.5s;
+}
+
+
+
+.FAQ-answer {
+    position: relative;
+    color: var(--color-light);
+    background-color: var(--color-light);
+    margin-top: 1em;
+    padding: 0 1em;
+    border-radius: var(--border-radius-medium);
+    transition: padding 0.8s, color 0.2s;
+
+    p {
+        font-size: 0;
+        transition: font-size 0.5s;
+    }
+}
+
+#question1:checked+.FAQ>.FAQ-answer,
+#question2:checked+.FAQ>.FAQ-answer,
+#question3:checked+.FAQ>.FAQ-answer {
+    color: var(--color-dark);
+    padding: 1em;
+    transition: padding 0.8s, color 0.2s 0.4s;
+
+    p {
+        font-size: 1em;
+        transition: font-size 0.5s ;
+    }
+
+    .arrow-up {
+        border-left: 0.5em solid transparent;
+        border-right: 0.5em solid transparent;
+        top: -0.4em;
+        left: 10%;
+        border-bottom: 0.5em solid var(--color-light);
+    }
+}
+
+
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    gap: 4rem;
+}
+
+.info-grid-item {
+    text-align: center;
+}
+
+.info-grid-item img {
+    width: 100%;
+}
+
 
 .hallå2 {
-    padding-top: 4rem;
-    padding-bottom: 200rem;
     background-color: #1a75ff4d;
-    background: opacity(0);
     transition: 0.5s;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: rem;
 }
 
 @media (max-width: 465px) {
