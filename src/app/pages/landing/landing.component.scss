@@ -104,18 +104,18 @@ button {
     padding: 0.4em;
     background-color: var(--color-accent);
     border-radius: 2em;
-    transition: transform 0.5s;
 }
 
 
 .expand-arrow img {
     width: 1.2em;
+    transition: transform 0.5s;
 }
 
-#question1:checked+.FAQ>.FAQ-question>.expand-arrow,
-#question2:checked+.FAQ>.FAQ-question>.expand-arrow,
-#question3:checked+.FAQ>.FAQ-question>.expand-arrow {
-    transform: rotate(180deg);
+#question1:checked+.FAQ>.FAQ-question>.expand-arrow>img,
+#question2:checked+.FAQ>.FAQ-question>.expand-arrow>img,
+#question3:checked+.FAQ>.FAQ-question>.expand-arrow>img {
+    transform: rotateX(-180deg);
 }
 
 .arrow-up {
@@ -157,7 +157,7 @@ button {
 
     p {
         font-size: 1em;
-        transition: font-size 0.3s ;
+        transition: font-size 0.3s;
     }
 
     .arrow-up {
