@@ -4,7 +4,7 @@
         <h3>
             {{ coursesData[quizId].quiz[quizSection].quizQuestion }}
         </h3>
-        <div ngClass="quiz-options">
+        <div #optionsSection ngClass="quiz-options">
             <button (click)="submitAnswer(quiz.quizId, quiz.correctAnswer, correctAnswerSection)"
                 *ngFor="let quiz of coursesData[quizId].quiz[quizSection].quizOptions" id="{{quiz.quizId}}"
                 [ngClass]="{'label-checkbox': true, 'label-correct': submittedAnswer == quiz.quizId && quiz.correctAnswer, 'label-incorrect': submittedAnswer == quiz.quizId && !quiz.correctAnswer}">
@@ -24,7 +24,7 @@
             <p>{{ coursesData[quizId].quiz[quizSection].quizAnswer }}</p>
         </div>
         <div ngClass="center">
-            <button ngClass="button" (click)="nextQuestion()" *ngIf="quizLocked">
+            <button ngClass="button" (click)="nextQuestion(optionsSection)" *ngIf="quizLocked">
                 Nästa fråga
             </button>
         </div>

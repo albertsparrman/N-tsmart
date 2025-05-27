@@ -1,7 +1,7 @@
 .quiz {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-    gap: 0.5rem;
+    gap: 0.5em;
     max-width: 60em;
 }
 
@@ -9,11 +9,16 @@
     display: flex;
     max-width: 50em;
     margin: 0 auto;
-    margin-bottom: 5rem;
+    margin-bottom: 5em;
 }
 
 .quiz-inner-container {
     width: 100%;
+}
+
+.quiz-inner-container h3 {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
 .quiz-options {
@@ -67,7 +72,7 @@
     background: var(--color-light-text);
     border-radius: var(--border-radius-small);
     padding: 0rem;
-    border: solid var(--color-dark) 0.15rem;
+    border: solid var(--color-dark) 0.15em;
     display: flex;
     transition: 0.3s, padding 0s, border 0s;
 }
@@ -83,6 +88,8 @@
 
 .correct-answer {
     display: none;
+    padding-top: 8rem;
+    margin-top: -7em;
     margin-bottom: 3.5em;
 }
 
@@ -109,7 +116,7 @@
 .label-incorrect,
 .label-correct {
     .checkbox {
-        padding: 0.1rem;
+        padding: 0.1em;
         border: none;
     }
 }

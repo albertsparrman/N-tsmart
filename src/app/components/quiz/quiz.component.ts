@@ -36,11 +36,11 @@ export class QuizComponent implements OnInit {
     })
   }
 
-  submitAnswer(answerId: string, correctAnswer: boolean, el: HTMLElement) {
+  submitAnswer(answerId: string, correctAnswer: boolean, scrollToAnswer: HTMLElement) {
     if (this.quizLocked == false) {
       this.submittedAnswer = answerId
       setTimeout(() => {
-         el.scrollIntoView()
+         scrollToAnswer.scrollIntoView()
       }, 50);
      
       this.quizLocked = true
@@ -54,9 +54,10 @@ export class QuizComponent implements OnInit {
     }
   }
 
-  nextQuestion() {
+  nextQuestion(scrollToOptions: HTMLElement) {
     if (this.quizId && this.quizSection < this.coursesData[this.quizId].quiz.length) {
       this.quizSection += 1
+      scrollToOptions.scrollIntoView()
     }
     else {
       console.log('quiz done');
