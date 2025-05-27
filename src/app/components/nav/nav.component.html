@@ -9,16 +9,16 @@
             </div>
         </div>
     </div>
-    
+
     <div ngClass="nav-flex nav-mobile">
         <div #navHighlight [ngClass]="['nav-mobile-highlight',
   router.isActive('/', true) ? 'highlight-pos1' : '',
-  router.isActive('/snabbkurser', true) ? 'highlight-pos2' : '',
-  router.isActive('/artiklar', true) ? 'highlight-pos3' : '',
+  router.isActive('/snabbkurser', false) ? 'highlight-pos2' : '',
+  router.isActive('/artiklar', false) ? 'highlight-pos3' : '',
   router.isActive('/verktyg', true) ? 'highlight-pos4' : '']"></div>
 
 
-        <a routerLink="/" ngClass="mobile-link" >
+        <a routerLink="/" ngClass="mobile-link">
             <img ngClass="nav-mobile-icon" src="../../../assets/icons/home-smile.svg" alt="">
             <p>Hem</p>
         </a>
