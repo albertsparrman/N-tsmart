@@ -11,6 +11,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 main,
@@ -154,7 +155,7 @@ button {
     padding: 1rem;
     border-radius: var(--border-radius-medium);
     box-shadow: 0 0.3em var(--color-dark);
-    transition: transform 0.2s;
+    transition: 0.2s;
 }
 
 .button:hover {
