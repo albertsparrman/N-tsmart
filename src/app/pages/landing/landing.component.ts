@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { NavComponent } from '../../components/nav/nav.component';
 import { CommonModule } from '@angular/common';
 import { CourseCardComponent } from "../../components/course-card/course-card.component";
 import { HttpClient } from '@angular/common/http';
@@ -7,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [NavComponent, CommonModule, CourseCardComponent],
+  imports: [CommonModule, CourseCardComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })

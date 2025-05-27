@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavComponent } from '../../components/nav/nav.component';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -9,7 +8,7 @@ import { QuizComponent } from '../../components/quiz/quiz.component';
 @Component({
   selector: 'app-course',
   standalone: true,
-  imports: [NavComponent, CommonModule, HttpClientModule, QuizComponent],
+  imports: [CommonModule, HttpClientModule, QuizComponent],
   templateUrl: './course.component.html',
   styleUrl: './course.component.scss'
 })
