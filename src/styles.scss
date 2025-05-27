@@ -146,6 +146,7 @@ button {
 
 
 .button {
+    transform: translateY(0em);
     margin-bottom: 2em;
     background-color: var(--color-accent);
     color: var(--color-light-text);
@@ -153,16 +154,16 @@ button {
     padding: 1rem;
     border-radius: var(--border-radius-medium);
     box-shadow: 0 0.3em var(--color-dark);
-    transition: 0.2s;
+    transition: transform 0.2s;
 }
 
 .button:hover {
-    margin-top: -0.15em;
+    transform: translateY(-0.15em);
     box-shadow: 0 0.45em var(--color-dark);
 }
 
 .button:active {
-    margin-top: 0.15em;
+    transform: translateY(0.15em);
     box-shadow: 0 0.15em var(--color-dark);
 }
 
