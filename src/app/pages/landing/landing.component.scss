@@ -73,8 +73,8 @@ button {
 
 .FAQ-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 0em 1em;
 }
 
 .FAQ {
@@ -144,7 +144,7 @@ button {
 
     p {
         font-size: 0;
-        transition: font-size 0.5s;
+        transition: font-size 0.3s 0.2s;
     }
 }
 
@@ -157,7 +157,7 @@ button {
 
     p {
         font-size: 1em;
-        transition: font-size 0.5s ;
+        transition: font-size 0.3s ;
     }
 
     .arrow-up {
