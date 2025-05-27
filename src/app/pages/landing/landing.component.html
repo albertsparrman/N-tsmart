@@ -1,15 +1,15 @@
 <div [style.opacity]="" id="background"></div>
 
 
-<header class="hero">
-    <div class="hero-text">
+<header ngClass="hero">
+    <div ngClass="hero-text">
         <img src="../../../assets/logos/Natsmart.svg" alt="">
         <h1>Ett tryggare internet för din familj</h1>
     </div>
-    <div [style.width]="" class="hero-background">
-        <img class="hero-computer" src="../../../assets/images/computer.svg" alt="">
-        <img [style.height]="" class="hero-computer-shine" src="../../../assets/images/beam.svg" alt="">
-        <img class="hero-man-and-son" src="../../../assets/images/ivan.svg" alt="">
+    <div ngClass="hero-background">
+        <img ngClass="hero-computer" src="../../../assets/images/computer.svg" alt="">
+        <img ngClass="hero-computer-shine" src="../../../assets/images/beam.svg" alt="">
+        <img ngClass="hero-man-and-son" src="../../../assets/images/ivan.svg" alt="">
     </div>
 </header>
 
@@ -34,8 +34,8 @@
                             <img src="../../../assets/icons/expand-arrow.svg" alt="">
                         </div>
                     </label>
-                    <div ngClass="FAQ-answer">
-                        <div ngClass="arrow-up"></div>
+                    <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
+                        <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
                         <p>Nätsmart är en kampanj lanserad av Sveriges regering för att informera vårdnadshavare runt om
                             i landet om barns cybersäkerhet och ger resurser för att utbilda om faror på nätet.</p>
                     </div>
@@ -49,8 +49,8 @@
                             <img src="../../../assets/icons/expand-arrow.svg" alt="">
                         </div>
                     </label>
-                    <div ngClass="FAQ-answer">
-                        <div ngClass="arrow-up"></div>
+                    <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
+                        <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
                         <p>Vår marknadsföring kan upplevas skrämmande men målet är ej att oroa, det är att få Sveriges
                             befolkning att vakna till gällande barns cybersäkerhet och vi åstadkommer detta genom dessa
                             djärva strategier.</p>
@@ -65,8 +65,8 @@
                             <img src="../../../assets/icons/expand-arrow.svg" alt="">
                         </div>
                     </label>
-                    <div ngClass="FAQ-answer">
-                        <div ngClass="arrow-up"></div>
+                    <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
+                        <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
                         <p>Nej, tvärtom. Du är lösningen, för endast du kan skydda ditt barn mot digitala övergrepp.
                             Genom att ta del av information vi ger ut så gör du stor skillnad för barns säkerhet online.
                         </p>
@@ -78,7 +78,6 @@
         <section #newSection2>
             <div ngClass="inner-container">
                 <h2>Vi hjälper dig att förstå, förebygga och skydda</h2>
-                <h3>Den här kampanjen är till för dig som förälder.</h3>
                 <p>Vi vet att det inte handlar om att ta mobilen ifrån barnet. Det handlar om att vara närvarande,
                     förstå
                     riskerna och våga prata om det som känns svårt. Därför har vi samlat pålitlig kunskap och praktiska
@@ -103,40 +102,19 @@
                 </div>
             </div>
         </section>
-
-        <section>
-            <div ngClass="inner-container">
-                <h2>title</h2>
-                <h3>subtitle</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                    Pellentesque
-                    sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-                    tellus.Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                    Pellentesque
-                    sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                    Pellentesque
-                    sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
-                    Pellentesque
-                    sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.
-                </p>
-            </div>
-        </section>
     </section>
 
     <section>
         <div ngClass="inner-container">
-            <h3>3-6</h3>
             <div ngClass="courses-grid">
-                <ng-container *ngFor="let course of coursesData">
-                    <div *ngIf="coursesData[course.id].age == '3-6'">
+                <ng-container *ngFor="let course of coursesData; index as i">
+                    <div *ngIf="i < 3">
                         <app-course-card [courseId]="course.id"></app-course-card>
                     </div>
                 </ng-container>
+            </div>
+            <div ngClass="center">
+                <a ngClass="button" routerLink="/snabbkurser">Se alla snabbkurser</a>
             </div>
         </div>
     </section>
