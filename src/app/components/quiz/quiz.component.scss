@@ -9,6 +9,7 @@
     display: flex;
     max-width: 50em;
     margin: 0 auto;
+    margin-bottom: 5rem;
 }
 
 .quiz-inner-container {
@@ -81,12 +82,18 @@
 }
 
 .correct-answer {
-    margin-bottom: 1.5em;
+    display: none;
+    margin-bottom: 3.5em;
+}
+
+.correct-answer-show {
+    display: block;
 }
 
 
 .center {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes showIcon {

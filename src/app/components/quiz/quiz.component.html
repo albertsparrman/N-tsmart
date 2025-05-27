@@ -5,7 +5,7 @@
             {{ coursesData[quizId].quiz[quizSection].quizQuestion }}
         </h3>
         <div ngClass="quiz-options">
-            <button (click)="submitAnswer(quiz.quizId, quiz.correctAnswer)"
+            <button (click)="submitAnswer(quiz.quizId, quiz.correctAnswer, correctAnswerSection)"
                 *ngFor="let quiz of coursesData[quizId].quiz[quizSection].quizOptions" id="{{quiz.quizId}}"
                 [ngClass]="{'label-checkbox': true, 'label-correct': submittedAnswer == quiz.quizId && quiz.correctAnswer, 'label-incorrect': submittedAnswer == quiz.quizId && !quiz.correctAnswer}">
 
@@ -19,13 +19,15 @@
                 </div>
             </button>
         </div>
-        <div #correctAnswerSection ngClass="correct-answer" *ngIf="quizLocked">
+        <div #correctAnswerSection [ngClass]="{'correct-answer': true, 'correct-answer-show': quizLocked}">
             <h3>Rätt svar</h3>
             <p>{{ coursesData[quizId].quiz[quizSection].quizAnswer }}</p>
         </div>
-        <button ngClass="button center" (click)="nextQuestion()" *ngIf="quizLocked">
-            Nästa fråga
-        </button>
+        <div ngClass="center">
+            <button ngClass="button" (click)="nextQuestion()" *ngIf="quizLocked">
+                Nästa fråga
+            </button>
+        </div>
     </div>
 
     <div *ngIf="quizSection >= coursesData[quizId].quiz.length">

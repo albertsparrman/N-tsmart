@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -20,6 +20,7 @@ export class QuizComponent implements OnInit {
   submittedAnswer: string = ''
   resetSelections: boolean = true
 
+
   coursesData: any;
   url: string = '../../../assets/courses.json'
 
@@ -35,9 +36,13 @@ export class QuizComponent implements OnInit {
     })
   }
 
-  submitAnswer(answerId: string, correctAnswer: boolean) {
+  submitAnswer(answerId: string, correctAnswer: boolean, el: HTMLElement) {
     if (this.quizLocked == false) {
       this.submittedAnswer = answerId
+      setTimeout(() => {
+         el.scrollIntoView()
+      }, 50);
+     
       this.quizLocked = true
       if (this.isAnswerCorrect = correctAnswer) {
         this.correctAnswers += 1
