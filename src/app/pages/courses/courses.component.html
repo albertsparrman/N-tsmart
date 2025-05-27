@@ -1,17 +1,18 @@
 <app-nav></app-nav>
 
-<header ngClass="header inner-container">
+<header ngClass="header inner-container text-container">
     <h1>Snabbkurser</h1>
+    <h3 ngClass="custom-header">Lär dig om hur du kan göra internet tryggare för ditt barn</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.
         Pellentesque
         sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.</p>
 </header>
 
 <section ngClass="courses inner-container">
-    <div ngClass="courses-header">
-        <h2>
+    <div ngClass="courses-header text-container">
+        <h3>
             Välj ditt barns ålder för att se relevanta kurser
-        </h2>
+        </h3>
     </div>
 
     <form ngClass="select-age" #gfgform="ngForm">
@@ -49,8 +50,9 @@
         </label>
     </form>
 
-    <div *ngIf="gfgform.value.threeToSix == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        <h3>3-6</h3>
+    <div ngClass="courses-section"
+        *ngIf="gfgform.value.threeToSix == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
+        <h3>Kurser för dig som har barn mellan 3-6 år</h3>
         <div ngClass="courses-grid">
             <ng-container *ngFor="let course of coursesData">
                 <div *ngIf="coursesData[course.id].age == '3-6'">
@@ -61,8 +63,9 @@
     </div>
 
 
-    <div *ngIf="gfgform.value.sevenToTen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        <h3>7-10</h3>
+    <div ngClass="courses-section"
+        *ngIf="gfgform.value.sevenToTen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
+        <h3>Kurser för dig som har barn mellan 7-10 år</h3>
         <div ngClass="courses-grid">
             <ng-container *ngFor="let course of coursesData">
                 <div *ngIf="coursesData[course.id].age == '7-10'">
@@ -72,8 +75,9 @@
         </div>
     </div>
 
-    <div *ngIf="gfgform.value.elevenToFourteen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        <h3>11-14</h3>
+    <div ngClass="courses-section"
+        *ngIf="gfgform.value.elevenToFourteen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
+        <h3>Kurser för dig som har barn mellan 11-14 år</h3>
         <div ngClass="courses-grid">
             <ng-container *ngFor="let course of coursesData">
                 <div *ngIf="coursesData[course.id].age == '11-14'">
@@ -83,8 +87,9 @@
         </div>
     </div>
 
-    <div *ngIf="gfgform.value.fifteenToSeventeen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        <h3>15-17</h3>
+    <div ngClass="courses-section"
+        *ngIf="gfgform.value.fifteenToSeventeen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
+        <h3>Kurser för dig som har barn mellan 15-17 år</h3>
         <div ngClass="courses-grid">
             <ng-container *ngFor="let course of coursesData">
                 <div *ngIf="coursesData[course.id].age == '15-17'">
