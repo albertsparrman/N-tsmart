@@ -140,11 +140,11 @@ button {
     margin-top: 1em;
     padding: 0 1em;
     border-radius: var(--border-radius-medium);
-    transition: padding 0.8s, color 0.2s;
+    transition: padding 0.8s 0.1s, color 0.2s;
 
     p {
         font-size: 0;
-        transition: font-size 0.3s 0.2s;
+        transition: font-size 0.3s 0.1s ease-in;
     }
 }
 
