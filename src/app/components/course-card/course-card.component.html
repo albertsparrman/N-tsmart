@@ -10,7 +10,7 @@
                 </div>
             </div>
             <h4 ngClass="course-name">{{ coursesData[courseId].name }}</h4>
-            <a routerLink="/snabbkurser/{{ coursesData[courseId].name }}/{{ coursesData[courseId].id }}">Till kursen</a>
+            <a ngClass="course-link" routerLink="/snabbkurser/{{ coursesData[courseId].name }}/{{ coursesData[courseId].id }}">Till kursen</a>
         </div>
     </article>
 </a>

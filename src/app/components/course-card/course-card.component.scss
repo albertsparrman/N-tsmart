@@ -1,7 +1,11 @@
 .course-card {
     border-radius: var(--border-radius-medium);
     background-color: var(--color-light-text);
-    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: scale(1.03);
 }
 
 .course-card-image {
@@ -33,6 +37,20 @@
 
 .course-name {
     margin-top: 0.2em;
-    margin-bottom: 1em;
+    margin-bottom: 0em;
     font-size: 1.3em;
+}
+
+.course-link {
+    margin-top: 1.5em;
+    display: inline-block;
+    background-color: var(--color-light);
+    padding: 0.6rem;
+    border-radius: var(--border-radius-small);
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.course-link:hover {
+    transform: scale(1.04);
 }
