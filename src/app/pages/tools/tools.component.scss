@@ -1,0 +1,141 @@
+header {
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: var(--color-dark);
+    color: var(--color-light-text);
+    width: 100%;
+    margin-left: -50%;
+    padding: 10rem 50% 4rem 50%;
+    border-radius: 0 0 50% 50%;
+}
+
+.header p {
+    margin-top: 2em;
+    margin-bottom: 6rem;
+}
+
+.app-grid-container {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.app-phone-container {
+    position: relative;
+    margin-top: -3rem;
+}
+
+.phone {
+    width: 15rem;
+    bottom: 0;
+    margin-left: 4em;
+    max-width: 40vw;
+}
+
+.phone-front {
+    position: absolute;
+    top: 0.1rem;
+    right: 5em;
+    transform: rotate(-3deg);
+    animation: frontPhone 1s;
+}
+
+@keyframes frontPhone {
+    0% {
+        top: 0;
+        right: 2em;
+        transform: rotate(0deg);
+    }
+}
+
+
+.app-content {
+    margin-top: 3rem;
+}
+
+.app-content p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.recomendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 1.5rem;
+}
+
+.recomendation {
+    background-color: var(--color-light-text);
+    border-radius: var(--border-radius-medium);
+}
+
+.recomendation-top {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+
+    background-color: var(--color-dark);
+    color: var(--color-light-text);
+}
+
+.recomendation-top h4 {
+    margin: 0;
+}
+
+.recomendation>p {
+    padding: 1.5rem;
+}
+
+.logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+.recomendation-link {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background-color: var(--color-light);
+    padding: 0.6rem;
+    border-radius: var(--border-radius-small);
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.recomendation-link:hover {
+    transform: scale(1.04);
+}
+
+@media (max-width: 848px) {
+    .app-grid-container {
+        flex-direction: column;
+        gap: 0em;
+        margin-bottom: 5rem;
+    }
+
+    .app-phone-container {
+        margin: 0 auto;
+        margin-top: -3rem;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .phone {
+        max-width: 40vw;
+    }
+
+    .recomendations-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
