@@ -63,7 +63,7 @@ p {
     text-decoration: none;
     font-weight: 500;
     color: inherit;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 p {
@@ -79,7 +79,7 @@ p {
     }
 
     p {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         font-size: 1.1rem;
     }
 
@@ -89,10 +89,28 @@ p {
     h6 {
         font-family: "Inter", sans-serif;
         font-weight: 700;
-        font-size: 1.5em;
-        margin-top: 2em;
-        margin-bottom: 0.5em;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
+ 
+    .image-with-text {
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .image-with-text p {
+        font-style: italic;
+        font-size: 1.3rem;
+    }
+
+    .image-with-text img {
+        height: 18rem;
+        max-width: 60vw;
+    } 
 }
 
 
@@ -100,13 +118,14 @@ p {
 
     h1,
     h2 {
-        padding-top: 1em;
-        margin-bottom: 1em;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 3rem;
     }
 
     p {
-        padding-bottom: 1em;
-        font-size: 1.1em;
+        padding-bottom: 3rem;
+        font-size: 1.1rem;
     }
 
     h3,
@@ -115,13 +134,13 @@ p {
     h6 {
         font-family: "Inter", sans-serif;
         font-weight: 700;
-        font-size: 1.5em;
-        margin-top: 1em;
-        margin-bottom: 0.8em;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     section {
-        margin-bottom: 5em;
+        margin-bottom: 6rem;
     }
 }
 
@@ -182,7 +201,26 @@ button {
 }
 
 @media (max-width: 784px) {
-    .inner-container, .large-inner-container {
+
+    .inner-container,
+    .large-inner-container {
         padding: 0 2rem;
+    }
+
+    .text-container {
+        .image-with-text {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .image-with-text p {
+            font-style: italic;
+            font-size: 1.2rem;
+            text-align: center;
+        }
     }
 }

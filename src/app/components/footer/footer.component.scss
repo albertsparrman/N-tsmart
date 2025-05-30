@@ -45,3 +45,9 @@ footer {
         flex-direction: column;
     }
 }
+
+@media (max-width: 784px) {
+    .footer-bottom  {
+        padding-bottom: 5rem;
+    }
+}

@@ -1,10 +1,10 @@
-<div ngClass="quiz-container" *ngIf="quizId && coursesData != undefined && coursesData[quizId].quiz != undefined">
+<div #optionsSection ngClass="quiz-container" *ngIf="quizId && coursesData != undefined && coursesData[quizId].quiz != undefined">
     <div ngClass="quiz-inner-container" *ngIf="quizSection < coursesData[quizId].quiz.length">
         <p>Fråga {{ quizSection + 1 }}/{{coursesData[quizId].quiz.length}}</p>
         <h3>
             {{ coursesData[quizId].quiz[quizSection].quizQuestion }}
         </h3>
-        <div #optionsSection ngClass="quiz-options">
+        <div  ngClass="quiz-options">
             <button (click)="submitAnswer(quiz.quizId, quiz.correctAnswer, correctAnswerSection)"
                 *ngFor="let quiz of coursesData[quizId].quiz[quizSection].quizOptions" id="{{quiz.quizId}}"
                 [ngClass]="{'label-checkbox': true, 'label-correct': submittedAnswer == quiz.quizId && quiz.correctAnswer, 'label-incorrect': submittedAnswer == quiz.quizId && !quiz.correctAnswer}">

@@ -1,4 +1,4 @@
-<div [style.opacity]="" id="background"></div>
+<div id="background"></div>
 
 
 <header ngClass="hero">
@@ -19,61 +19,68 @@
 
 <main [style.backgroundColor]="backgroundColor" [style.color]="color" ngClass="hallå2">
     <section ngClass="text-container-landing">
-        <section #newSection>
+        <section #newSection ngClass="big-text-container">
             <div ngClass="inner-container">
-                <h2 ngClass="big-text">Hjälp ditt barn att navigera säkert i en digital värld</h2>
-                <p>Barn tillbringar allt mer tid online - för att leka, lära sig, umgås och utforska. Men bakom skärmen
-                    finns också risker: från nätmobbning och olämpligt innehåll till kontakt med främmande personer och
-                    beroendeframkallande appar.</p>
+                <h2 ngClass="big-text">Endast 6% av barn vänder sig till sina föräldrar vid ett cyberhot.</h2>
+                <p>Barn tillbringar idag många timmar online, men saknar ofta grundläggande kunskaper om cybersäkerhet.
+                    Därför behövs stöd och vägledning från både föräldrar och skola för att tryggheten på nätet ska
+                    kunna säkerställas.</p>
             </div>
         </section>
 
         <section>
-            <div ngClass="inner-container FAQ-container">
-                <input ngClass="dp-none" id="question1" type="checkbox">
-                <div ngClass="FAQ">
-                    <label ngClass="FAQ-question" for="question1">
-                        <p>Vad är Nätsmart?</p>
-                        <div class="expand-arrow">
-                            <img src="../../../assets/icons/expand-arrow.svg" alt="">
+            <div ngClass="inner-container">
+                <h2>Vanliga frågor</h2>
+                <div ngClass="FAQ-container">
+                    <input ngClass="dp-none" id="question1" type="checkbox">
+                    <div ngClass="FAQ">
+                        <label ngClass="FAQ-question" for="question1">
+                            <p>Vad är Nätsmart?</p>
+                            <div class="expand-arrow">
+                                <img src="../../../assets/icons/expand-arrow.svg" alt="">
+                            </div>
+                        </label>
+                        <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
+                            <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
+                            <p>Nätsmart är en kampanj lanserad av Sveriges regering för att informera vårdnadshavare
+                                runt om
+                                i landet om barns cybersäkerhet och ger resurser för att utbilda om faror på nätet.</p>
                         </div>
-                    </label>
-                    <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
-                        <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
-                        <p>Nätsmart är en kampanj lanserad av Sveriges regering för att informera vårdnadshavare runt om
-                            i landet om barns cybersäkerhet och ger resurser för att utbilda om faror på nätet.</p>
                     </div>
-                </div>
 
-                <input ngClass="dp-none" id="question2" type="checkbox">
-                <div ngClass="FAQ">
-                    <label ngClass="FAQ-question" for="question2">
-                        <p>Varför är marknadsföringen så skrämmande?</p>
-                        <div class="expand-arrow">
-                            <img src="../../../assets/icons/expand-arrow.svg" alt="">
+                    <input ngClass="dp-none" id="question2" type="checkbox">
+                    <div ngClass="FAQ">
+                        <label ngClass="FAQ-question" for="question2">
+                            <p>Varför är marknadsföringen så skrämmande?</p>
+                            <div class="expand-arrow">
+                                <img src="../../../assets/icons/expand-arrow.svg" alt="">
+                            </div>
+                        </label>
+                        <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
+                            <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
+                            <p>Vår marknadsföring kan upplevas skrämmande men målet är ej att oroa, det är att få
+                                Sveriges
+                                befolkning att vakna till gällande barns cybersäkerhet och vi åstadkommer detta genom
+                                dessa
+                                djärva strategier.</p>
                         </div>
-                    </label>
-                    <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
-                        <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
-                        <p>Vår marknadsföring kan upplevas skrämmande men målet är ej att oroa, det är att få Sveriges
-                            befolkning att vakna till gällande barns cybersäkerhet och vi åstadkommer detta genom dessa
-                            djärva strategier.</p>
                     </div>
-                </div>
 
-                <input ngClass="dp-none" id="question3" type="checkbox">
-                <div ngClass="FAQ">
-                    <label ngClass="FAQ-question" for="question3">
-                        <p>Är jag som förälder problemet?</p>
-                        <div class="expand-arrow">
-                            <img src="../../../assets/icons/expand-arrow.svg" alt="">
+                    <input ngClass="dp-none" id="question3" type="checkbox">
+                    <div ngClass="FAQ">
+                        <label ngClass="FAQ-question" for="question3">
+                            <p>Är jag som förälder problemet?</p>
+                            <div class="expand-arrow">
+                                <img src="../../../assets/icons/expand-arrow.svg" alt="">
+                            </div>
+                        </label>
+                        <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
+                            <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
+                            <p>Nej, tvärtom. Du är lösningen, för endast du kan skydda ditt barn mot digitala övergrepp.
+                                Genom att ta del av information vi ger ut så gör du stor skillnad för barns säkerhet
+                                online.
+                            </p>
                         </div>
-                    </label>
-                    <div [style.backgroundColor]="backgroundColorBouble" ngClass="FAQ-answer">
-                        <div [style.color]="backgroundColorBouble" ngClass="arrow-up"></div>
-                        <p>Nej, tvärtom. Du är lösningen, för endast du kan skydda ditt barn mot digitala övergrepp.
-                            Genom att ta del av information vi ger ut så gör du stor skillnad för barns säkerhet online.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -81,27 +88,22 @@
 
         <section #newSection2>
             <div ngClass="inner-container">
-                <h2>Vi hjälper dig att förstå, förebygga och skydda</h2>
-                <p>Vi vet att det inte handlar om att ta mobilen ifrån barnet. Det handlar om att vara närvarande,
-                    förstå
-                    riskerna och våga prata om det som känns svårt. Därför har vi samlat pålitlig kunskap och praktiska
-                    verktyg som gör det enklare för dig att</p>
+                <h2>Vi hjälper dig skapa en säkrare internetmiljö för dig och din familj</h2>
                 <div ngClass="info-grid">
                     <div ngClass="info-grid-item">
                         <img src="../../../assets/images/Frame24.png" alt="">
-                        <p>Få koll på hur olika appar fungerar - och vilka risker som finns</p>
+                        <p>Nätbrott mot barn har ökat med 20% per år - kunskap om cybersäkerhet är nu viktigare än
+                            någonsin.</p>
                     </div>
                     <div ngClass="info-grid-item">
                         <img src="../../../assets/images/Frame24.png" alt="">
-                        <p>Lära dig upptäcka varningstecken - innan något händer</p>
+                        <p>Cybersäkerhet handlar om att skydda digitala plattformar och användare genom att samordna
+                            resurser, processer och strukturer i digitala system./p>
                     </div>
                     <div ngClass="info-grid-item">
                         <img src="../../../assets/images/Frame24.png" alt="">
-                        <p>Prata med ditt barn på ett sätt som bygger förtroende</p>
-                    </div>
-                    <div ngClass="info-grid-item">
-                        <img src="../../../assets/images/Frame24.png" alt="">
-                        <p>Sätta gränser som fungerar - utan att skapa konflikt</p>
+                        <p>Som förälder, vårdnadshavare eller lärare har du en viktig roll. Med rätt stöd och kunskap
+                            kan vi tillsammans minska cyberhot och skapa en tryggare framtid.</p>
                     </div>
                 </div>
             </div>
@@ -110,6 +112,12 @@
 
     <section>
         <div ngClass="inner-container">
+            <div ngClass="text-container-landing">
+                <h2>Lär dig mer om hur du kan skydda din familj på internet</h2>
+                <p>Genom våra snabbkurser, skräddarsydda för just ditt barn och baserade på tusentals noggrant utvalda
+                    källor, kan du enkelt hålla dig uppdaterad om vanliga internetrisker och hur du effektivt kan
+                    hantera dem.</p>
+            </div>
             <div ngClass="courses-grid">
                 <ng-container *ngFor="let course of coursesData; index as i">
                     <div *ngIf="i < 3">

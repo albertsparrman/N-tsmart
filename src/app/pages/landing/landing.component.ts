@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseCardComponent } from "../../components/course-card/course-card.component";
 import { HttpClient } from '@angular/common/http';
@@ -40,7 +40,7 @@ export class LandingComponent {
     /*     this.shine = 150 - (window.scrollY/(1 + this.screenHeight/100)) + 'vw'
         console.log(window.scrollY/(1 + this.screenHeight/100));
          */
-    if (window.scrollY >= this.section2?.nativeElement.offsetTop - this.screenHeight / 2) {
+    if (window.scrollY >= this.section2?.nativeElement.offsetTop - this.screenHeight / 3) {
       this.backgroundColor = 'var(--color-light)'
       this.color = 'var(--color-dark)'
       this.backgroundColorBouble = 'var(--color-light-text)'

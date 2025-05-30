@@ -40,9 +40,9 @@ export class QuizComponent implements OnInit {
     if (this.quizLocked == false) {
       this.submittedAnswer = answerId
       setTimeout(() => {
-         scrollToAnswer.scrollIntoView()
-      }, 50);
-     
+        scrollToAnswer.scrollIntoView()
+      }, 10);
+
       this.quizLocked = true
       if (this.isAnswerCorrect = correctAnswer) {
         this.correctAnswers += 1
@@ -57,7 +57,13 @@ export class QuizComponent implements OnInit {
   nextQuestion(scrollToOptions: HTMLElement) {
     if (this.quizId && this.quizSection < this.coursesData[this.quizId].quiz.length) {
       this.quizSection += 1
-      scrollToOptions.scrollIntoView()
+      setTimeout(() => {
+        scrollToOptions.scrollIntoView({
+          behavior: 'smooth'
+        })
+      }, 10);
+
+
     }
     else {
       console.log('quiz done');

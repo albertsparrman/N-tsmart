@@ -24,3 +24,9 @@ h1 {
 .time-icon {
     width: 1.5em;
 }
+
+@media (max-width: 784px) { 
+    .header {
+         padding: 8rem 50% 4rem 50%;
+    }
+}

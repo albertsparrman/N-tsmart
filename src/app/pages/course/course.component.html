@@ -1,8 +1,8 @@
 <header>
     <div ngClass="header">
-        <div ngClass="inner-container">
-            <h1>{{ name }}</h1>
-            <div *ngIf="id && coursesData" ngClass="time">
+        <div *ngIf="id && coursesData" ngClass="inner-container">
+            <h1>{{ coursesData[id].name }}</h1>
+            <div  ngClass="time">
                 <img ngClass="time-icon" src="../../../assets/icons/clock.svg" alt="">
                 <p>{{ coursesData[id].time }} min</p>
             </div>
@@ -15,6 +15,10 @@
             <h2 *ngIf="coursesData[id].content[i].title != null">{{ coursesData[id].content[i].title }}</h2>
             <h3 *ngIf="coursesData[id].content[i].subtitle != null">{{ coursesData[id].content[i].subtitle }}</h3>
             <p *ngIf="coursesData[id].content[i].text != null">{{ coursesData[id].content[i].text }}</p>
+            <div ngClass="image-with-text" *ngIf="coursesData[id].content[i].imageWithText != null">
+                <img src="../../../assets/images/{{ coursesData[id].content[i].imageWithText.image }}" alt="">
+                <p>{{ coursesData[id].content[i].imageWithText.text }}</p>
+            </div>
         </div>
     </section>
 

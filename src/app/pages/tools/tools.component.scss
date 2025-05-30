@@ -7,13 +7,12 @@ header {
     color: var(--color-light-text);
     width: 100%;
     margin-left: -50%;
-    padding: 10rem 50% 4rem 50%;
+    padding: 8rem 50% 4rem 50%;
     border-radius: 0 0 50% 50%;
 }
 
 .header p {
-    margin-top: 2em;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
 }
 
 .app-grid-container {
@@ -138,4 +137,10 @@ header {
         gap: 2rem;
     }
 
+}
+
+@media (max-width: 784px) { 
+    .header {
+         padding: 1rem 50% 4rem 50%;
+    }
 }

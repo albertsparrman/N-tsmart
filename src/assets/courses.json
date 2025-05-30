@@ -1,71 +1,80 @@
 [
     {
         "id": "0",
-        "name": "Exempel 1",
+        "name": "Informationsläckage",
         "time": "2",
         "age": "3-6",
         "content": [
             {
-                "title": "Titel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "title": "Vad är informationsläckage?",
+                "text": "Informationsläckage är ett exempel där personlig eller känslig information hamnar i fel händer, oftast beroende på brist på säkerhet eller okunskap. Barnen är särskilt utsatta när de används tillsammans med internet, samtidigt som många föräldrar och lärare dåligt är förberedda att beskydda dem. Även om många föräldrar är medvetna om faror som online finns, använder bara hälften redskap som föräldrakontroller för att skydda sina barn."
             },
             {
-                "subtitle": "Undertitel",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus."
+                "text": "Skolor har en viktig funktion i att öka cybersäkerhetsmedvetenheten, men resurser och struktur för detta saknas vanligtvis. Utan rätt ledning riskerar barn att dela känslig information som kan utnyttjas av andra. Många barn utsätts för olämpligt innehåll eller kontakta med främlingar. Avgörande är det därför att vuxna tar ansvar för att bepröva barnens digitala trygghet."
+            },
+             {
+                "imageWithText": {
+                    "text": "När ditt barn skapar ett konto online ska inte din information hamna i fel händer. Det är lätt att den säljs vidare i ett paket med 10 000 andra på en marknadsplats i dark web.",
+                    "image": "Frame25.png"
+                }
+             },
+            {
+                "subtitle": "Ta ansvar!",
+                "text": "Använd aldrig samma lösenord för flera tjänster, eftersom ett stulet lösenord kan öppna många dörrar. Starka och unika lösenord, gärna lagrade i en lösenordshanterare, gör det enklare att hålla koll. Aktivera alltid tvåfaktorsautentisering för ett extra skyddslager. Använd föräldrakontroll för att begränsa barnens tillgång till olämpligt innehåll. På så sätt kan du minska risken för informationsläckage och skydda både dig och ditt barn."
             }
         ],
         "quiz": [
             {
-                "quizQuestion": "Fråga 1",
+                "quizQuestion": "Ditt Lösenord är just nu Äpple123. Du ska göra ett nytt lösenord. Vilket alternativ är säkrast?",
                 "quizOptions": [
                     {
                         "quizId": "option1",
-                        "option": "Exempel1",
+                        "option": "Äpple321",
                         "correctAnswer": false
                     },
                     {
                         "quizId": "option2",
-                        "option": "Exempel2",
+                        "option": "Päron987",
                         "correctAnswer": true
                     },
                     {
                         "quizId": "option3",
-                        "option": "Exempel3",
+                        "option": "Äpple456",
                         "correctAnswer": false
                     },
                     {
                         "quizId": "option4",
-                        "option": "Exempel4",
+                        "option": "Äpple123",
                         "correctAnswer": false
                     }
                 ],
-                "quizAnswer": "Korrekt svar"
+                "quizAnswer": "Päron987 är ett bra val - lätt att minnas men tillräckligt olikt det gamla lösenordet. Ett mer komplext lösenord, som J4gÄl5k:rHunDAr!?, hade varit säkrare, men är ofta svårare att komma ihåg. Det gäller att hitta en bra balans."
             },
             {
-                "quizQuestion": "Fråga 2",
+                "quizQuestion": "Vilken information får du ge ut till en främling online?",
                 "quizOptions": [
                     {
                         "quizId": "option1",
-                        "option": "quiz2",
+                        "option": "Mejladress",
                         "correctAnswer": false
                     },
                     {
                         "quizId": "option2",
-                        "option": "Exempel2",
-                        "correctAnswer": true
+                        "option": "Lösenord",
+                        "correctAnswer": false
                     },
                     {
                         "quizId": "option3",
-                        "option": "Exempel3",
-                        "correctAnswer": false
+                        "option": "Användarnamn",
+                        "correctAnswer": true
                     },
                     {
                         "quizId": "option4",
-                        "option": "Exempel4",
+                        "option": "Telefonnummer",
                         "correctAnswer": false
                     }
                 ],
-                "quizAnswer": "Korrekt svar"
+                "quizAnswer": "Användarnamnet är någonting som är offentligt och därigenom inte någonting som kan spåra dig (så vidare det inte består av personliga uppgifter). Du bör aldrig ge ut privat information till folk du inte känner."
             }
         ]
     },
@@ -165,7 +174,6 @@
             {
                 "text": "För barn som rör sig i spelvärldar, på sociala medier eller i appar där man kommunicerar med andra, är risken större än man kanske tror. Många bedragare riktar sig just mot yngre användare eftersom de är mer lättlurade och mindre benägna att ifrågasätta det de ser."
             },
-
             {
                 "subtitle": "Hur kan phishing se ut för barn?",
                 "text": "Phishing riktat mot barn tar ofta formen av något lockande eller hotfullt. Det kan vara ett meddelande som säger att barnet vunnit något - till exempel spelvaluta, skins eller ett exklusivt erbjudande. Eller så kan det handla om att någon låtsas vara administratör och påstår att barnets konto håller på att raderas om de inte loggar in igen 'omedelbart'."
@@ -173,7 +181,6 @@
             {
                 "text": "Föräldrar märker ibland inte när något hänt, eftersom barn ofta inte vågar berätta. Kanske för att de skäms, är rädda för att bli av med mobilen, eller helt enkelt inte förstår vad de har varit med om. Därför är det viktigt att du som vuxen har koll - och vågar prata om det som känns svårt."
             },
-
             {
                 "subtitle": "Vad behöver barn veta - och hur pratar man om det?",
                 "text": "Du behöver inte vara tekniskt kunnig för att göra stor skillnad. Det räcker ofta med enkla samtal i vardagen. Berätta att riktiga företag aldrig ber om lösenord via chatt. Förklara att det är bättre att fråga en vuxen en gång för mycket än en gång för lite. Och framför allt - gör klart att det inte är barnets fel om de blir lurade."
@@ -192,7 +199,6 @@
                 "subtitle": "Sammanfattning",
                 "text": "Phishing är en av de vanligaste hoten på nätet, och barn är en särskilt utsatt grupp. Genom att prata öppet, visa intresse och ge barnet strategier för att känna igen bedrägeriförsök, bygger du ett skydd som räcker långt. Det behöver inte vara komplicerat - men det kräver att du vågar vara nyfiken på vad som händer bakom skärmen."
             }
-
         ],
         "quiz": [
             {
@@ -262,7 +268,6 @@
             {
                 "text": "För barn som rör sig i spelvärldar, på sociala medier eller i appar där man kommunicerar med andra, är risken större än man kanske tror. Många bedragare riktar sig just mot yngre användare eftersom de är mer lättlurade och mindre benägna att ifrågasätta det de ser."
             },
-
             {
                 "subtitle": "Hur kan phishing se ut för barn?",
                 "text": "Phishing riktat mot barn tar ofta formen av något lockande eller hotfullt. Det kan vara ett meddelande som säger att barnet vunnit något - till exempel spelvaluta, skins eller ett exklusivt erbjudande. Eller så kan det handla om att någon låtsas vara administratör och påstår att barnets konto håller på att raderas om de inte loggar in igen 'omedelbart'."
@@ -270,7 +275,6 @@
             {
                 "text": "Föräldrar märker ibland inte när något hänt, eftersom barn ofta inte vågar berätta. Kanske för att de skäms, är rädda för att bli av med mobilen, eller helt enkelt inte förstår vad de har varit med om. Därför är det viktigt att du som vuxen har koll - och vågar prata om det som känns svårt."
             },
-
             {
                 "subtitle": "Vad behöver barn veta - och hur pratar man om det?",
                 "text": "Du behöver inte vara tekniskt kunnig för att göra stor skillnad. Det räcker ofta med enkla samtal i vardagen. Berätta att riktiga företag aldrig ber om lösenord via chatt. Förklara att det är bättre att fråga en vuxen en gång för mycket än en gång för lite. Och framför allt - gör klart att det inte är barnets fel om de blir lurade."
@@ -292,7 +296,6 @@
             {
                 "text": "Föräldrar märker ibland inte när något hänt, eftersom barn ofta inte vågar berätta. Kanske för att de skäms, är rädda för att bli av med mobilen, eller helt enkelt inte förstår vad de har varit med om. Därför är det viktigt att du som vuxen har koll - och vågar prata om det som känns svårt."
             }
-
         ],
         "quiz": [
             {
