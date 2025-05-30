@@ -118,6 +118,6 @@
 
 @media (max-width: 656px) {
     .courses-grid {
-        grid-template-columns: repeat(2, minmax(18rem, 1fr));
+        grid-template-columns: repeat(1, minmax(18rem, 1fr));
     }
 }
