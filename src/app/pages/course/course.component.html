@@ -1,7 +1,6 @@
 <header>
-    <div ngClass="header">
-        <div *ngIf="id && coursesData"
-            ngClass="header-container inner-container">
+    <div *ngIf="id && coursesData" [style.backgroundColor]="coursesData[id].backgroundColor" ngClass="header">
+        <div ngClass="header-container inner-container">
             <div ngClass="title">
                 <h1>{{ coursesData[id].name }}</h1>
                 <div ngClass="time">
@@ -9,7 +8,9 @@
                     <p>{{ coursesData[id].time }} min</p>
                 </div>
             </div>
-            <div [style.backgroundImage]="'url(../../../assets/images/phishing.svg)'" ngClass="background-image"></div>
+            <div *ngIf="coursesData[id].imageUrl"
+                [style.backgroundImage]="'url(../../../assets/images/'+coursesData[id].imageUrl+')'"
+                ngClass="background-image"></div>
         </div>
     </div>
 </header>

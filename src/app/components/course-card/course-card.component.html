@@ -1,6 +1,6 @@
 <a *ngIf="courseId && coursesData" routerLink="/snabbkurser/{{ coursesData[courseId].name }}/{{ coursesData[courseId].id }}">
     <article ngClass="course-card">
-        <img ngClass="course-card-image" src="" alt="">
+        <img [style.backgroundColor]="coursesData[courseId].backgroundColor" ngClass="course-card-image" src="../../../assets/images/{{coursesData[courseId].imageUrl}}" alt="">
         <div ngClass="course-card-inner-container">
             <div ngClass="course-card-info">
                 <p>Snabbkurs</p>

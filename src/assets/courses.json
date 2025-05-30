@@ -3,6 +3,8 @@
         "id": "0",
         "name": "Informationsläckage",
         "time": "2",
+        "imageUrl": "ivan.svg",
+        "backgroundColor": "#E2E7EE",
         "age": "3-6",
         "content": [
             {
@@ -12,12 +14,12 @@
             {
                 "text": "Skolor har en viktig funktion i att öka cybersäkerhetsmedvetenheten, men resurser och struktur för detta saknas vanligtvis. Utan rätt ledning riskerar barn att dela känslig information som kan utnyttjas av andra. Många barn utsätts för olämpligt innehåll eller kontakta med främlingar. Avgörande är det därför att vuxna tar ansvar för att bepröva barnens digitala trygghet."
             },
-             {
+            {
                 "imageWithText": {
                     "text": "När ditt barn skapar ett konto online ska inte din information hamna i fel händer. Det är lätt att den säljs vidare i ett paket med 10 000 andra på en marknadsplats i dark web.",
                     "image": "Frame25.png"
                 }
-             },
+            },
             {
                 "subtitle": "Ta ansvar!",
                 "text": "Använd aldrig samma lösenord för flera tjänster, eftersom ett stulet lösenord kan öppna många dörrar. Starka och unika lösenord, gärna lagrade i en lösenordshanterare, gör det enklare att hålla koll. Aktivera alltid tvåfaktorsautentisering för ett extra skyddslager. Använd föräldrakontroll för att begränsa barnens tillgång till olämpligt innehåll. På så sätt kan du minska risken för informationsläckage och skydda både dig och ditt barn."
@@ -165,6 +167,7 @@
         "id": "8",
         "name": "Vad är phishing",
         "time": "5",
+        "imageUrl": "phishing.svg",
         "age": "11-14",
         "content": [
             {
