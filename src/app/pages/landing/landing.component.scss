@@ -42,20 +42,19 @@ button {
 .en,
 .familj {
     position: absolute;
-    font-size: 1.6em;
+    font-size: 1.6rem;
 }
 
 .bli {
     left: 30%;
     top: -38%;
-    font-size: 1.6em;
+    font-size: 1.6rem;
     transform: rotate(1deg);
     animation: fromTop 1.1s 1;
 }
 
 .en {
-    left: 42%;
-    top: -36%;
+    margin-left: 0.4rem;
     animation: fromTop 0.9s 1;
 }
 
