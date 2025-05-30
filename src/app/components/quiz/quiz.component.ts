@@ -15,11 +15,10 @@ export class QuizComponent implements OnInit {
   quizId: string | null = ""
   quizLocked: boolean = false
   quizSection: number = 0;
-  quizDone: boolean = false
+  quizStarted: boolean = false
   isAnswerCorrect: boolean = false
   correctAnswers: number = 0
   submittedAnswer: string = ''
-  resetSelections: boolean = true
 
   jsConfetti = new JSConfetti()
 
@@ -37,6 +36,15 @@ export class QuizComponent implements OnInit {
     this.http.get(this.url).subscribe(res => {
       this.coursesData = res;
     })
+  }
+
+  startQuiz(scrollToOptions: HTMLElement) {
+    this.quizStarted = true
+    setTimeout(() => {
+      scrollToOptions.scrollIntoView({
+        behavior: 'smooth'
+      })
+    }, 10);
   }
 
   submitAnswer(answerId: string, correctAnswer: boolean, scrollToAnswer: HTMLElement) {

@@ -1,6 +1,13 @@
 <div #optionsSection ngClass="quiz-container"
     *ngIf="quizId && coursesData != undefined && coursesData[quizId].quiz != undefined">
-    <div ngClass="quiz-inner-container" *ngIf="quizSection < coursesData[quizId].quiz.length">
+
+    <div *ngIf="!quizStarted" ngClass="quiz-finish text-container">
+        <h2>Testa dina kunskaper</h2>
+        <p>Nu är det dags att testa dina nya kunskaper och se vad du lärt dig.</p>
+        <button ngClass="button" (click)="startQuiz(optionsSection)">Starta Quiz</button>
+    </div>
+
+    <div ngClass="quiz-inner-container" *ngIf="quizSection < coursesData[quizId].quiz.length && quizStarted">
         <p>Fråga {{ quizSection + 1 }}/{{coursesData[quizId].quiz.length}}</p>
         <h3>
             {{ coursesData[quizId].quiz[quizSection].quizQuestion }}
@@ -9,9 +16,7 @@
             <button (click)="submitAnswer(quiz.quizId, quiz.correctAnswer, correctAnswerSection)"
                 *ngFor="let quiz of coursesData[quizId].quiz[quizSection].quizOptions" id="{{quiz.quizId}}"
                 [ngClass]="{'label-checkbox': true, 'label-correct': submittedAnswer == quiz.quizId && quiz.correctAnswer, 'label-incorrect': submittedAnswer == quiz.quizId && !quiz.correctAnswer}">
-
                 {{ quiz.option }}
-
                 <div ngClass="checkbox">
                     <img *ngIf=" submittedAnswer == quiz.quizId && isAnswerCorrect" ngClass="checkbox-icon"
                         src="../../../assets/icons/check-green.svg" alt="">
