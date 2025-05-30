@@ -1,7 +1,7 @@
 <div #optionsSection ngClass="quiz-container"
     *ngIf="quizId && coursesData != undefined && coursesData[quizId].quiz != undefined">
 
-    <div *ngIf="!quizStarted" ngClass="quiz-finish text-container">
+    <div *ngIf="!quizStarted" ngClass="quiz-center text-container">
         <h2>Testa dina kunskaper</h2>
         <p>Nu är det dags att testa dina nya kunskaper och se vad du lärt dig.</p>
         <button ngClass="button" (click)="startQuiz(optionsSection)">Starta Quiz</button>
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <div ngClass="quiz-finish text-container" *ngIf="quizSection >= coursesData[quizId].quiz.length">
+    <div ngClass="quiz-center text-container" *ngIf="quizSection >= coursesData[quizId].quiz.length">
         <div ngClass="happy-man-container">
             <div ngClass="happy-man-background"></div>
             <img ngClass="happy-man" src="../../../assets/images/happyManNoBackground.svg" alt="">

@@ -125,11 +125,12 @@
     animation: ShowMan 0.8s 1, bounce 3.6s 0.8s infinite;
 }
 
-.quiz-finish {
+.quiz-center {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 
 
