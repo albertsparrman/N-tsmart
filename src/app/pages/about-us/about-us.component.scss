@@ -24,9 +24,9 @@ header {
 }
 
 .about-us-image {
-    width: 150%;
-    max-width: 60vw;
-    height: 18rem;
+    width: 28rem;
+    max-width: 80vw;
+    margin-top: 1rem;
 }
 
 .section-gap {
@@ -40,6 +40,13 @@ header {
 
 .margin-bottom {
     margin-bottom: 10rem;
+}
+
+@media (max-width: 948px) {
+    .about-us-flex { 
+        gap: 1rem;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 784px) { 
