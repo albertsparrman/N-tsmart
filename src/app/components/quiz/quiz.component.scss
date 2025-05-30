@@ -10,7 +10,7 @@
     max-width: 50em;
     margin: 0 auto;
     margin-bottom: 12rem;
-        padding-top: 8rem;
+    padding-top: 8rem;
     margin-top: -5rem;
 }
 
@@ -177,5 +177,12 @@
     .checkbox {
         padding: 0.1em;
         border: none;
+    }
+}
+
+@media (max-width: 848px) {
+    .quiz-container {
+        padding-top: 4rem;
+        margin-top: -1rem;
     }
 }
