@@ -1,11 +1,15 @@
 <header>
     <div ngClass="header">
-        <div *ngIf="id && coursesData" ngClass="inner-container">
-            <h1>{{ coursesData[id].name }}</h1>
-            <div  ngClass="time">
-                <img ngClass="time-icon" src="../../../assets/icons/clock.svg" alt="">
-                <p>{{ coursesData[id].time }} min</p>
+        <div *ngIf="id && coursesData"
+            ngClass="header-container inner-container">
+            <div ngClass="title">
+                <h1>{{ coursesData[id].name }}</h1>
+                <div ngClass="time">
+                    <img ngClass="time-icon" src="../../../assets/icons/clock.svg" alt="">
+                    <p>{{ coursesData[id].time }} min</p>
+                </div>
             </div>
+            <div [style.backgroundImage]="'url(../../../assets/images/phishing.svg)'" ngClass="background-image"></div>
         </div>
     </div>
 </header>

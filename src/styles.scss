@@ -92,11 +92,12 @@ p {
         font-size: 1.5rem;
         margin-top: 2rem;
         margin-bottom: 1rem;
+        line-height: 150%;
     }
- 
+
     .image-with-text {
-        margin-top: 3rem;
-        margin-bottom: 5rem;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
         display: flex;
         align-items: center;
         gap: 3rem;
@@ -104,13 +105,13 @@ p {
 
     .image-with-text p {
         font-style: italic;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .image-with-text img {
-        height: 18rem;
-        max-width: 60vw;
-    } 
+        width: 50rem;
+        max-width: 80vw;
+    }
 }
 
 
@@ -137,6 +138,7 @@ p {
         font-size: 1.5rem;
         margin-top: 1rem;
         margin-bottom: 0.8rem;
+        line-height: 150%;
     }
 
     section {
@@ -209,8 +211,8 @@ button {
 
     .text-container {
         .image-with-text {
-            margin-top: 4rem;
-            margin-bottom: 4rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -219,8 +221,67 @@ button {
 
         .image-with-text p {
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-align: center;
+        }
+    }
+}
+
+@media (max-width: 378px) {
+    .text-container {
+
+        h1,
+        h2 {
+            padding-top: 1rem;
+            margin-bottom: 1.7rem;
+            font-size: 1.8rem;
+        }
+
+        p {
+            padding-bottom: 2.8rem;
+            font-size: 1rem;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    .text-container-landing {
+
+        h1,
+        h2 {
+            padding-top: 1rem;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+
+        p {
+            padding-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 0.8rem;
+            line-height: 145%;
+        }
+
+        section {
+            margin-bottom: 6rem;
         }
     }
 }
