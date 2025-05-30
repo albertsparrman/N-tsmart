@@ -12,87 +12,93 @@
         </h3>
     </div>
 
-    <form ngClass="select-age" #gfgform="ngForm">
-        <input ngClass="dp-none" type="checkbox" id="threeToSix" name="threeToSix" ngModel>
-        <label for="threeToSix" ngClass="label-checkbox">
+    <section ngClass="select-age">
+        <button (click)="selectAgeInput('threeToSix')"
+            [ngClass]="{'label-checkbox': true, 'label-checkbox-checked': threeToSix}">
             <p draggable="false">3-6 år</p>
             <div ngClass="checkbox">
                 <img draggable="false" ngClass="checkbox-icon" src="../../../assets/icons/check-blue.svg" alt="">
             </div>
-        </label>
+        </button>
 
-        <input ngClass="dp-none" type="checkbox" id="sevenToTen" name="sevenToTen" ngModel>
-        <label for="sevenToTen" ngClass="label-checkbox">
+        <button (click)="selectAgeInput('sevenToTen')"
+            [ngClass]="{'label-checkbox': true, 'label-checkbox-checked': sevenToTen}">
             <p draggable="false">7-10 år</p>
             <div ngClass="checkbox">
                 <img draggable="false" ngClass="checkbox-icon" src="../../../assets/icons/check-blue.svg" alt="">
             </div>
-        </label>
+        </button>
 
-        <input ngClass="dp-none" type="checkbox" id="elevenToFourteen" name="elevenToFourteen" ngModel>
-        <label for="elevenToFourteen" ngClass="label-checkbox">
+        <button (click)="selectAgeInput('elevenToFourteen')"
+            [ngClass]="{'label-checkbox': true, 'label-checkbox-checked': elevenToFourteen}">
             <p draggable="false">11-14 år</p>
             <div ngClass="checkbox">
                 <img draggable="false" ngClass="checkbox-icon" src="../../../assets/icons/check-blue.svg" alt="">
             </div>
-        </label>
+        </button>
 
-
-        <input ngClass="dp-none" type="checkbox" id="fifteenToSeventeen" name="fifteenToSeventeen" ngModel>
-        <label for="fifteenToSeventeen" ngClass="label-checkbox">
+        <button (click)="selectAgeInput('fifteenToSeventeen')"
+            [ngClass]="{'label-checkbox': true, 'label-checkbox-checked': fifteenToSeventeen}">
             <p draggable="false">15-17 år</p>
             <div ngClass="checkbox">
                 <img draggable="false" ngClass="checkbox-icon" src="../../../assets/icons/check-blue.svg" alt="">
             </div>
-        </label>
-    </form>
+        </button>
+    </section>
 
-    <div ngClass="courses-section"
-        *ngIf="gfgform.value.threeToSix == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        <h3>Kurser för dig som har barn mellan 3-6 år</h3>
-        <div ngClass="courses-grid">
-            <ng-container *ngFor="let course of coursesData">
-                <div *ngIf="coursesData[course.id].age == '3-6'">
+
+    <div ngClass="courses-container">
+        <div ngClass="courses-section" *ngIf="!threeToSix && !sevenToTen && !elevenToFourteen && !fifteenToSeventeen">
+            <h3>Alla snabbkurser</h3>
+            <div ngClass="courses-grid">
+                <ng-container *ngFor="let course of coursesData">
                     <app-course-card [courseId]="course.id"></app-course-card>
-                </div>
-            </ng-container>
+                </ng-container>
+            </div>
         </div>
-    </div>
 
-
-    <div ngClass="courses-section"
-        *ngIf="gfgform.value.sevenToTen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        <h3>Kurser för dig som har barn mellan 7-10 år</h3>
-        <div ngClass="courses-grid">
-            <ng-container *ngFor="let course of coursesData">
-                <div *ngIf="coursesData[course.id].age == '7-10'">
-                    <app-course-card [courseId]="course.id"></app-course-card>
-                </div>
-            </ng-container>
+        <div ngClass="courses-section" *ngIf="threeToSix">
+            <h3>Kurser för dig som har barn mellan 3-6 år</h3>
+            <div ngClass="courses-grid">
+                <ng-container *ngFor="let course of coursesData">
+                    <div *ngIf="coursesData[course.id].age == '3-6'">
+                        <app-course-card [courseId]="course.id"></app-course-card>
+                    </div>
+                </ng-container>
+            </div>
         </div>
-    </div>
 
-    <div ngClass="courses-section"
-        *ngIf="gfgform.value.elevenToFourteen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        <h3>Kurser för dig som har barn mellan 11-14 år</h3>
-        <div ngClass="courses-grid">
-            <ng-container *ngFor="let course of coursesData">
-                <div *ngIf="coursesData[course.id].age == '11-14'">
-                    <app-course-card [courseId]="course.id"></app-course-card>
-                </div>
-            </ng-container>
+        <div ngClass="courses-section" *ngIf="sevenToTen">
+            <h3>Kurser för dig som har barn mellan 7-10 år</h3>
+            <div ngClass="courses-grid">
+                <ng-container *ngFor="let course of coursesData">
+                    <div *ngIf="coursesData[course.id].age == '7-10'">
+                        <app-course-card [courseId]="course.id"></app-course-card>
+                    </div>
+                </ng-container>
+            </div>
         </div>
-    </div>
 
-    <div ngClass="courses-section"
-        *ngIf="gfgform.value.fifteenToSeventeen == true || gfgform.value.threeToSix == false && gfgform.value.sevenToTen == false && gfgform.value.elevenToFourteen == false && gfgform.value.fifteenToSeventeen == false">
-        <h3>Kurser för dig som har barn mellan 15-17 år</h3>
-        <div ngClass="courses-grid">
-            <ng-container *ngFor="let course of coursesData">
-                <div *ngIf="coursesData[course.id].age == '15-17'">
-                    <app-course-card [courseId]="course.id"></app-course-card>
-                </div>
-            </ng-container>
+        <div ngClass="courses-section" *ngIf="elevenToFourteen">
+            <h3>Kurser för dig som har barn mellan 11-14 år</h3>
+            <div ngClass="courses-grid">
+                <ng-container *ngFor="let course of coursesData">
+                    <div *ngIf="coursesData[course.id].age == '11-14'">
+                        <app-course-card [courseId]="course.id"></app-course-card>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <div ngClass="courses-section" *ngIf="fifteenToSeventeen">
+            <h3>Kurser för dig som har barn mellan 15-17 år</h3>
+            <div ngClass="courses-grid">
+                <ng-container *ngFor="let course of coursesData">
+                    <div *ngIf="coursesData[course.id].age == '15-17'">
+                        <app-course-card [courseId]="course.id"></app-course-card>
+                    </div>
+                </ng-container>
+            </div>
         </div>
     </div>
 </section>

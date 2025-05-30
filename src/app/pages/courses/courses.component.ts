@@ -16,6 +16,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 export class CoursesComponent implements OnInit {
   coursesData: any;
   url: string = '../../../assets/courses.json'
+  threeToSix: boolean = false
+  sevenToTen: boolean = false
+  elevenToFourteen: boolean = false
+  fifteenToSeventeen: boolean = false
 
   constructor(private http: HttpClient) {}
 
@@ -24,5 +28,20 @@ export class CoursesComponent implements OnInit {
     this.http.get(this.url).subscribe(res => {
       this.coursesData = res;
     })
+  }
+
+  selectAgeInput(age: string) {
+    if (age == "threeToSix") {
+      this.threeToSix = !this.threeToSix
+    }
+    else if (age == "sevenToTen") {
+      this.sevenToTen = !this.sevenToTen
+    }
+    else if (age == "elevenToFourteen") {
+      this.elevenToFourteen = !this.elevenToFourteen
+    }
+    else if (age == "fifteenToSeventeen") {
+      this.fifteenToSeventeen = !this.fifteenToSeventeen
+    }
   }
 }

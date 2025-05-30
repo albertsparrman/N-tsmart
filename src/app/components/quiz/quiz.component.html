@@ -1,10 +1,11 @@
-<div #optionsSection ngClass="quiz-container" *ngIf="quizId && coursesData != undefined && coursesData[quizId].quiz != undefined">
+<div #optionsSection ngClass="quiz-container"
+    *ngIf="quizId && coursesData != undefined && coursesData[quizId].quiz != undefined">
     <div ngClass="quiz-inner-container" *ngIf="quizSection < coursesData[quizId].quiz.length">
         <p>Fråga {{ quizSection + 1 }}/{{coursesData[quizId].quiz.length}}</p>
         <h3>
             {{ coursesData[quizId].quiz[quizSection].quizQuestion }}
         </h3>
-        <div  ngClass="quiz-options">
+        <div ngClass="quiz-options">
             <button (click)="submitAnswer(quiz.quizId, quiz.correctAnswer, correctAnswerSection)"
                 *ngFor="let quiz of coursesData[quizId].quiz[quizSection].quizOptions" id="{{quiz.quizId}}"
                 [ngClass]="{'label-checkbox': true, 'label-correct': submittedAnswer == quiz.quizId && quiz.correctAnswer, 'label-incorrect': submittedAnswer == quiz.quizId && !quiz.correctAnswer}">
@@ -30,8 +31,23 @@
         </div>
     </div>
 
-    <div *ngIf="quizSection >= coursesData[quizId].quiz.length">
-        <h3>Quiz klart</h3>
-        {{ correctAnswers + '/' + coursesData[quizId].quiz.length }}
+    <div ngClass="quiz-finish text-container" *ngIf="quizSection >= coursesData[quizId].quiz.length">
+        <div ngClass="happy-man-container">
+            <div ngClass="happy-man-background"></div>
+            <img ngClass="happy-man" src="../../../assets/images/happyManNoBackground.svg" alt="">
+        </div>
+        <h2>Du fick {{ correctAnswers }} av {{ coursesData[quizId].quiz.length }} rätt</h2>
+        <p *ngIf="correctAnswers == coursesData[quizId].quiz.length">Riktigt imponerande, du fick alla rätt! Du har
+            verkligen koll på hur man är säker och smart på nätet. Det är tydligt att du vet vad du gör och tar
+            internetsäkerhet på allvar.</p>
+        <p
+            *ngIf="correctAnswers >= coursesData[quizId].quiz.length / 2 && correctAnswers != coursesData[quizId].quiz.length">
+            Väldigt bra jobbat! Du missade bara några få frågor, men du visade att du har god förståelse för hur man
+            skyddar sig på nätet. Några små justeringar till, så är du snart helt i mål. Fortsätt vara nyfiken och
+            vaksam, du är på rätt väg!</p>
+        <p *ngIf="correctAnswers < coursesData[quizId].quiz.length / 2">Det blev kanske inte så många rätt den här gången,
+            men att du tog dig igenom quizet är ett viktigt första steg. Internetsäkerhet kan kännas klurigt ibland, men
+            ju mer du lär dig, desto tryggare blir du online. Gå gärna igenom svaren igen, du är redan på väg åt rätt
+            håll!</p>
     </div>
 </div>

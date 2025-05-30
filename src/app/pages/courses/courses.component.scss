@@ -38,6 +38,7 @@
     transform: scale(1);
 }
 
+
 .checkbox {
     width: 1em;
     height: 1em;
@@ -58,69 +59,23 @@
     transition: 0.3s;
 }
 
-#threeToSix:checked+ {
-    .label-checkbox {
-        background-color: #2E78BD;
-        color: var(--color-light-text);
-    }
+.label-checkbox-checked {
+    background-color: #2E78BD;
+    color: var(--color-light-text);
 
-    .label-checkbox>.checkbox {
+    .checkbox {
         padding: 0.1rem;
         border: none;
     }
 
-    .label-checkbox>.checkbox>.checkbox-icon {
-        scale: 1;
-    }
-}
-
-#sevenToTen:checked+ {
-    .label-checkbox {
-        background-color: #2E78BD;
-        color: var(--color-light-text);
-    }
-
-    .label-checkbox>.checkbox {
-        padding: 0.1rem;
-        border: none;
-    }
-
-    .label-checkbox>.checkbox>.checkbox-icon {
+    .checkbox>.checkbox-icon {
         scale: 1;
     }
 }
 
 
-#elevenToFourteen:checked+ {
-    .label-checkbox {
-        background-color: #2E78BD;
-        color: var(--color-light-text);
-    }
-
-    .label-checkbox>.checkbox {
-        padding: 0.1rem;
-        border: none;
-    }
-
-    .label-checkbox>.checkbox>.checkbox-icon {
-        scale: 1;
-    }
-}
-
-#fifteenToSeventeen:checked+ {
-    .label-checkbox {
-        background-color: #2E78BD;
-        color: var(--color-light-text);
-    }
-
-    .label-checkbox>.checkbox {
-        padding: 0.1rem;
-        border: none;
-    }
-
-    .label-checkbox>.checkbox>.checkbox-icon {
-        scale: 1;
-    }
+.courses-container {
+    min-height: 25rem;
 }
 
 .custom-header {
@@ -132,10 +87,15 @@
     margin-bottom: 5em;
 }
 
-
+/* .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1em;
+}
+ */
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    grid-template-columns: repeat(3, minmax(18rem, 1fr));
     gap: 1em;
 }
 
@@ -143,8 +103,21 @@
     margin-bottom: 10rem;
 }
 
-@media (max-width: 784px) { 
+@media (max-width: 784px) {
     .header {
-         padding-top: 1rem
+        padding-top: 1rem
+    }
+}
+
+
+@media (max-width: 1088px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, minmax(18rem, 1fr));
+    }
+}
+
+@media (max-width: 656px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, minmax(18rem, 1fr));
     }
 }

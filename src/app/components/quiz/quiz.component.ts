@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import JSConfetti from 'js-confetti'
 
 @Component({
   selector: 'app-quiz',
@@ -19,6 +20,8 @@ export class QuizComponent implements OnInit {
   correctAnswers: number = 0
   submittedAnswer: string = ''
   resetSelections: boolean = true
+
+  jsConfetti = new JSConfetti()
 
 
   coursesData: any;
@@ -55,21 +58,27 @@ export class QuizComponent implements OnInit {
   }
 
   nextQuestion(scrollToOptions: HTMLElement) {
-    if (this.quizId && this.quizSection < this.coursesData[this.quizId].quiz.length) {
+    if (this.quizId && this.quizSection <= this.coursesData[this.quizId].quiz.length) {
       this.quizSection += 1
-      setTimeout(() => {
-        scrollToOptions.scrollIntoView({
-          behavior: 'smooth'
-        })
-      }, 10);
-
-
+      if (this.quizSection == this.coursesData[this.quizId].quiz.length) {
+        setTimeout(() => {
+          this.confetti()
+        }, 200);
+      }
     }
-    else {
-      console.log('quiz done');
-    }
+    setTimeout(() => {
+      scrollToOptions.scrollIntoView({
+        behavior: 'smooth'
+      })
+    }, 10);
     this.submittedAnswer = ''
     this.quizLocked = false
+  }
+
+  confetti() {
+    console.log("ha");
+    this.jsConfetti.addConfetti()
+
   }
 
 }

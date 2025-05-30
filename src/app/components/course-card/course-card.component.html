@@ -1,6 +1,8 @@
-<a *ngIf="courseId && coursesData" routerLink="/snabbkurser/{{ coursesData[courseId].name }}/{{ coursesData[courseId].id }}">
+<a *ngIf="courseId && coursesData"
+    routerLink="/snabbkurser/{{ coursesData[courseId].name }}/{{ coursesData[courseId].id }}">
     <article ngClass="course-card">
-        <img [style.backgroundColor]="coursesData[courseId].backgroundColor" ngClass="course-card-image" src="../../../assets/images/{{coursesData[courseId].imageUrl}}" alt="">
+        <img [style.backgroundColor]="coursesData[courseId].backgroundColor" ngClass="course-card-image"
+            src="../../../assets/images/{{coursesData[courseId].imageUrl}}" alt="">
         <div ngClass="course-card-inner-container">
             <div ngClass="course-card-info">
                 <p>Snabbkurs</p>
@@ -10,7 +12,7 @@
                 </div>
             </div>
             <h4 ngClass="course-name">{{ coursesData[courseId].name }}</h4>
-            <a ngClass="course-link" routerLink="/snabbkurser/{{ coursesData[courseId].name }}/{{ coursesData[courseId].id }}">Till kursen</a>
+            <p ngClass="course-link">Till kursen</p>
         </div>
     </article>
 </a>

@@ -32,7 +32,7 @@ export class CourseComponent {
     })
 
     setTimeout(() => {
-      if (this.id) {
+      if (this.id && this.coursesData) {
         this.titleService.setTitle("Nätsmart - " + this.coursesData[this.id].name)
       }
     }, 100);

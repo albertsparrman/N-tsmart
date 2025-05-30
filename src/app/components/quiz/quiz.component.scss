@@ -100,6 +100,63 @@
 }
 
 
+.happy-man-container {
+    position: relative;
+    min-width: 12rem;
+    height: 14rem;
+
+    overflow: hidden;
+    border-radius: 0 0 9rem 9rem;
+}
+
+.happy-man-background {
+    width: 12rem;
+    height: 12rem;
+    background-color: #ACC5EA;
+    border-radius: 9rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.happy-man {
+    margin-top: 1rem;
+    position: relative;
+    width: 12rem;
+    animation: ShowMan 0.8s 1, bounce 3.6s 0.8s infinite;
+}
+
+.quiz-finish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+@keyframes ShowMan {
+    0% {
+        transform: translateY(50%) scale(0.8) rotate(8deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2%) scaleY(0.97);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+}
+
 .center {
     display: flex;
     justify-content: center;

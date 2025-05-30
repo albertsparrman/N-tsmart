@@ -1,5 +1,5 @@
 header {
-   overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .header {
@@ -23,34 +23,111 @@ header {
     gap: 2rem;
 }
 
+.reverse-flex {
+    gap: 4rem;
+}
+
 .about-us-image {
-    width: 28rem;
+    width: 30rem;
     max-width: 80vw;
     margin-top: 1rem;
 }
 
+.about-us-image-small-container {
+    position: relative;
+    min-width: 18rem;
+    height: 20rem;
+
+    overflow: hidden;
+    border-radius: 0 0 9rem 9rem;
+}
+
+.about-us-image-small-background {
+    width: 18rem;
+    height: 18rem;
+    background-color: #ACC5EA;
+    border-radius: 9rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.about-us-image-small {
+    position: relative;
+    width: 18rem;
+    animation: ShowMan 0.8s 1, bounce 3.6s 0.8s infinite;
+}
+
+@keyframes ShowMan {
+    0% {
+        transform: translateY(50%) scale(0.8) rotate(8deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2%) scaleY(0.97);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+}
+
 .section-gap {
-    margin-top: 3rem;
-    margin-bottom: 4em;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .center {
     text-align: center;
+     margin-bottom: 6rem;
 }
 
 .margin-bottom {
     margin-bottom: 10rem;
 }
 
-@media (max-width: 948px) {
-    .about-us-flex { 
+@media (max-width: 974px) {
+    .about-us-flex {
         gap: 1rem;
         flex-direction: column;
     }
+
+    .reverse-flex {
+        gap: 4rem;
+        flex-direction: row;
+    }
 }
 
-@media (max-width: 784px) { 
+@media (max-width: 784px) {
     .header {
-         padding: 1rem 50% 4rem 50%;
+        padding: 1rem 50% 4rem 50%;
+    }
+
+    .reverse-flex {
+        gap: 1rem;
+        flex-direction: column-reverse;
+    }
+
+    .about-us-image-small-container {
+        min-width: 12rem;
+        height: 13rem;
+    }
+
+    .about-us-image-small-background {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .about-us-image-small {
+        width: 12rem;
     }
 }
