@@ -111,6 +111,10 @@ header {
     transform: scale(1.04);
 }
 
+.margin-bottom {
+    margin-bottom: 10rem;
+}
+
 @media (max-width: 848px) {
     .app-grid-container {
         flex-direction: column;
