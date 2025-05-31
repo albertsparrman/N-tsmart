@@ -62,22 +62,28 @@ button {
     left: 50%;
     bottom: -25%;
     font-size: 1.8em;
-    animation: fromRight 1.5s 1;
+    animation: fromRight 1.2s 1;
 }
 
 @keyframes fromTop {
     0% {
-        transform: translateY(-5em) rotateX(90deg);
+        transform: translateY(-5rem) rotateX(90deg);
+    }
+    10% {
+        transform: translateY(-5rem) rotateX(90deg);
+    }
+    100% {
+        transform: translateY(0) rotateX(0deg);
     }
 }
 
 @keyframes fromRight {
     0% {
-        transform: translateX(15em) rotateY(90deg);
+        transform: translateX(15rem) rotateY(90deg);
     }
 
     50% {
-        transform: translateX(15em) rotateY(90deg);
+        transform: translateX(15rem) rotateY(90deg);
     }
 }
 
@@ -111,7 +117,7 @@ button {
 .hero-computer-shine {
     position: absolute;
     left: 50%;
-    top: 1.3rem;
+    top: 1.35rem;
     transform: translate(-50%);
     width: 1800%;
     height: 300vh;

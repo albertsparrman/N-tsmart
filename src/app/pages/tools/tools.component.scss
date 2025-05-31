@@ -37,16 +37,28 @@ header {
 .phone-front {
     position: absolute;
     top: 0.1rem;
-    right: 5em;
+    right: 5rem;
     transform: rotate(-3deg);
-    animation: frontPhone 1s;
+    animation: frontPhone 1.4s;
 }
 
 @keyframes frontPhone {
     0% {
         top: 0;
-        right: 2em;
+        right: 2rem;
         transform: rotate(0deg);
+    }
+
+    10% {
+        top: 0;
+        right: 2rem;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 0.1rem;
+        right: 5rem;
+        transform: rotate(-3deg);
     }
 }
 

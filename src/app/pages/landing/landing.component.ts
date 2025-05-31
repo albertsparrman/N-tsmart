@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
-export class LandingComponent {
+export class LandingComponent  {
   coursesData: any;
   url: string = '../../../assets/courses.json'
   /*   shine = '150vw' */
@@ -34,6 +34,7 @@ export class LandingComponent {
       this.onResize();
     }
   }
+
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {

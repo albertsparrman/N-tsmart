@@ -19,9 +19,9 @@
                 {{ quiz.option }}
                 <div ngClass="checkbox">
                     <img *ngIf=" submittedAnswer == quiz.quizId && isAnswerCorrect" ngClass="checkbox-icon"
-                        src="../../../assets/icons/check-green.svg" alt="">
+                        src="../../../assets/icons/check-green.svg" alt="" loading="lazy">
                     <img *ngIf=" submittedAnswer == quiz.quizId && !isAnswerCorrect" ngClass="checkbox-icon"
-                        src="../../../assets/icons/cross-red.svg" alt="">
+                        src="../../../assets/icons/cross-red.svg" alt="" loading="lazy">
                 </div>
             </button>
         </div>
@@ -39,7 +39,7 @@
     <div ngClass="quiz-center text-container" *ngIf="quizSection >= coursesData[quizId].quiz.length">
         <div ngClass="happy-man-container">
             <div ngClass="happy-man-background"></div>
-            <img ngClass="happy-man" src="../../../assets/images/happyManNoBackground.svg" alt="">
+            <img ngClass="happy-man" src="../../../assets/images/happyManNoBackground.svg" alt="" loading="lazy">
         </div>
         <h2>Du fick {{ correctAnswers }} av {{ coursesData[quizId].quiz.length }} rätt</h2>
         <p *ngIf="correctAnswers == coursesData[quizId].quiz.length">Riktigt imponerande, du fick alla rätt! Du har

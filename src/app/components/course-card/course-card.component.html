@@ -2,7 +2,7 @@
     routerLink="/snabbkurser/{{ coursesData[courseId].name }}/{{ coursesData[courseId].id }}">
     <article ngClass="course-card">
         <img [style.backgroundColor]="coursesData[courseId].backgroundColor" ngClass="course-card-image"
-            src="../../../assets/images/{{coursesData[courseId].imageUrl}}" alt="">
+            src="../../../assets/images/{{coursesData[courseId].imageUrl}}" alt="" loading="lazy">
         <div ngClass="course-card-inner-container">
             <div ngClass="course-card-info">
                 <p>Snabbkurs</p>
