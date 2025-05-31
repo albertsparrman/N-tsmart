@@ -305,6 +305,17 @@ button {
     }
 
     .hero-text {
-    font-size: 4vw;
+        font-size: 4vw;
+    }
 }
+
+@media (max-height: 648px) {
+    .hero {
+        height: 648px;
+    }
+
+    .hero-text-container {
+
+        margin-top: 16rem;
+    }
 }
