@@ -51,7 +51,9 @@ export class QuizComponent implements OnInit {
     if (this.quizLocked == false) {
       this.submittedAnswer = answerId
       setTimeout(() => {
-        scrollToAnswer.scrollIntoView()
+        scrollToAnswer.scrollIntoView({
+          behavior: 'smooth'
+        })
       }, 10);
 
       this.quizLocked = true
