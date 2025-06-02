@@ -82,7 +82,7 @@ header {
 .recomendation {
     background-color: var(--color-light-text);
     border-radius: var(--border-radius-medium);
-        transition: transform 0.3s, box-shadow 0.4s;
+    transition: transform 0.3s, box-shadow 0.4s;
 }
 
 .recomendation:hover {
@@ -94,7 +94,7 @@ header {
 .recomendation-top {
     display: flex;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     gap: 1rem;
     border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
 
@@ -102,13 +102,27 @@ header {
     color: var(--color-light-text);
 }
 
+.family-link {
+    background-color: #f6f6f6;
+    color: var(--color-dark);
+}
+
+.qustudio {
+    background-color: #49c591;
+}
+
+.nord-vpn {
+    background-color: #1d89e4;
+}
+
+.bark {
+    background-color: #1942d8;
+}
+
 .recomendation-top h4 {
     margin: 0;
 }
 
-.recomendation>p {
-    padding: 1.5rem;
-}
 
 .logo {
     width: 4rem;
@@ -116,10 +130,17 @@ header {
 }
 
 
+.recomendation-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    gap: 2rem;
+    height: calc(100% - 99px - 3rem);
+}
+
 .recomendation-link {
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    display: inline-block;
+    width: fit-content;
     background-color: var(--color-light);
     padding: 0.6rem;
     border-radius: var(--border-radius-small);
