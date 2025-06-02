@@ -38,9 +38,6 @@ export class LandingComponent  {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    /*     this.shine = 150 - (window.scrollY/(1 + this.screenHeight/100)) + 'vw'
-        console.log(window.scrollY/(1 + this.screenHeight/100));
-         */
     if (window.scrollY >= this.section2?.nativeElement.offsetTop - this.screenHeight / 3) {
       this.backgroundColor = 'var(--color-light)'
       this.color = 'var(--color-dark)'
@@ -57,14 +54,5 @@ export class LandingComponent  {
   onResize() {
     this.screenHeight = window.innerHeight;
   }
-
-  /*   ngAfterViewInit() {
-      
-  
-      if (typeof window !== "undefined") {
-        this.onWindowScroll()
-      }
-    }
-   */
 
 }
