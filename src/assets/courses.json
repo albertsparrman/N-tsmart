@@ -3,9 +3,15 @@
         "id": "0",
         "name": "Informationsläckage",
         "time": "2",
-        "imageUrl": "ivan.svg",
-        "backgroundColor": "#E2E7EE",
-        "age": "3-6",
+        "imageUrl": "hackerMan.svg",
+        "backgroundColor": "#E8E0DE",
+        "foregroundLight": false,
+        "ageGroup": {
+            "threeToSix": true,
+            "sevenToTen": true,
+            "elevenToFourteen": true,
+            "fifteenToSeventeen": true
+        },
         "content": [
             {
                 "title": "Vad är informationsläckage?",
@@ -84,7 +90,15 @@
         "id": "1",
         "name": "Exempel 2",
         "time": "5",
-        "age": "3-6",
+        "imageUrl": "adblocker.svg",
+        "backgroundColor": "#E1BFC8",
+        "foregroundLight": false,
+        "ageGroup": {
+            "threeToSix": false,
+            "sevenToTen": true,
+            "elevenToFourteen": false,
+            "fifteenToSeventeen": false
+        },
         "content": [
             {
                 "title": "Annan Titel",
@@ -100,7 +114,15 @@
         "id": "2",
         "name": "Exempel 3",
         "time": "7",
-        "age": "3-6",
+        "imageUrl": "rabbitHole.svg",
+        "backgroundColor": "#468142",
+        "foregroundLight": true,
+        "ageGroup": {
+            "threeToSix": false,
+            "sevenToTen": true,
+            "elevenToFourteen": false,
+            "fifteenToSeventeen": false
+        },
         "content": [
             {
                 "title": "En tredje Titel",
@@ -110,9 +132,17 @@
     },
     {
         "id": "3",
-        "name": "Exempel 6",
+        "name": "Exempel 4",
         "time": "2",
-        "age": "3-6",
+        "imageUrl": "shield.svg",
+        "backgroundColor": "#A6C1E9",
+        "foregroundLight": false,
+        "ageGroup": {
+            "threeToSix": false,
+            "sevenToTen": true,
+            "elevenToFourteen": false,
+            "fifteenToSeventeen": false
+        },
         "content": [
             {
                 "title": "Exempel"
@@ -121,9 +151,17 @@
     },
     {
         "id": "4",
-        "name": "Exempel 2",
+        "name": "Exempel 5",
         "time": "2",
-        "age": "7-10",
+        "imageUrl": "graph.svg",
+        "backgroundColor": "#E2E2E2",
+        "foregroundLight": false,
+        "ageGroup": {
+            "threeToSix": false,
+            "sevenToTen": true,
+            "elevenToFourteen": false,
+            "fifteenToSeventeen": false
+        },
         "content": [
             {
                 "title": "Exempel"
@@ -132,43 +170,17 @@
     },
     {
         "id": "5",
-        "name": "Exempel 2",
-        "time": "2",
-        "age": "7-10",
-        "content": [
-            {
-                "title": "Exempel"
-            }
-        ]
-    },
-    {
-        "id": "6",
-        "name": "Exempel 2",
-        "time": "2",
-        "age": "7-10",
-        "content": [
-            {
-                "title": "Exempel"
-            }
-        ]
-    },
-    {
-        "id": "7",
-        "name": "Exempel 2",
-        "time": "2",
-        "age": "7-10",
-        "content": [
-            {
-                "title": "Exempel"
-            }
-        ]
-    },
-    {
-        "id": "8",
         "name": "Vad är phishing",
         "time": "5",
         "imageUrl": "phishing.svg",
-        "age": "11-14",
+        "backgroundColor": "#1F2B51",
+        "foregroundLight": true,
+        "ageGroup": {
+            "threeToSix": false,
+            "sevenToTen": true,
+            "elevenToFourteen": false,
+            "fifteenToSeventeen": false
+        },
         "content": [
             {
                 "title": "Vad är phishing - och varför drabbar det barn",
@@ -201,103 +213,6 @@
             {
                 "subtitle": "Sammanfattning",
                 "text": "Phishing är en av de vanligaste hoten på nätet, och barn är en särskilt utsatt grupp. Genom att prata öppet, visa intresse och ge barnet strategier för att känna igen bedrägeriförsök, bygger du ett skydd som räcker långt. Det behöver inte vara komplicerat - men det kräver att du vågar vara nyfiken på vad som händer bakom skärmen."
-            }
-        ],
-        "quiz": [
-            {
-                "quizQuestion": "Fråga 1",
-                "quizOptions": [
-                    {
-                        "quizId": "option1",
-                        "option": "Exempel1",
-                        "correctAnswer": false
-                    },
-                    {
-                        "quizId": "option2",
-                        "option": "Exempel2",
-                        "correctAnswer": true
-                    },
-                    {
-                        "quizId": "option3",
-                        "option": "Exempel3",
-                        "correctAnswer": false
-                    },
-                    {
-                        "quizId": "option4",
-                        "option": "Exempel4",
-                        "correctAnswer": false
-                    }
-                ],
-                "quizAnswer": "Föräldrar märker ibland inte när något hänt, eftersom barn ofta inte vågar berätta. Kanske för att de skäms, är rädda för att bli av med mobilen, eller helt enkelt inte förstår vad de har varit med om. Därför är det viktigt att du som vuxen har koll - och vågar prata om det som känns svårt."
-            },
-            {
-                "quizQuestion": "Fråga 2",
-                "quizOptions": [
-                    {
-                        "quizId": "option1",
-                        "option": "quiz2",
-                        "correctAnswer": false
-                    },
-                    {
-                        "quizId": "option2",
-                        "option": "Exempel2",
-                        "correctAnswer": true
-                    },
-                    {
-                        "quizId": "option3",
-                        "option": "Exempel3",
-                        "correctAnswer": false
-                    },
-                    {
-                        "quizId": "option4",
-                        "option": "Exempel4",
-                        "correctAnswer": false
-                    }
-                ],
-                "quizAnswer": "Korrekt svar"
-            }
-        ]
-    },
-    {
-        "id": "9",
-        "name": "Exempel 11",
-        "time": "2",
-        "age": "15-17",
-        "content": [
-            {
-                "title": "Vad är phishing - och varför drabbar det barn",
-                "text": "Phishing, eller nätfiske, är när någon försöker lura till sig personlig information genom att låtsas vara någon annan. Det kan handla om att en bedragare skickar ett mejl, ett SMS eller ett meddelande i en app där de påstår sig representera en spelplattform, ett företag eller till och med en kompis. Målet är att få barnet att klicka på en länk, skriva in sitt lösenord, eller lämna ut känslig information."
-            },
-            {
-                "text": "För barn som rör sig i spelvärldar, på sociala medier eller i appar där man kommunicerar med andra, är risken större än man kanske tror. Många bedragare riktar sig just mot yngre användare eftersom de är mer lättlurade och mindre benägna att ifrågasätta det de ser."
-            },
-            {
-                "subtitle": "Hur kan phishing se ut för barn?",
-                "text": "Phishing riktat mot barn tar ofta formen av något lockande eller hotfullt. Det kan vara ett meddelande som säger att barnet vunnit något - till exempel spelvaluta, skins eller ett exklusivt erbjudande. Eller så kan det handla om att någon låtsas vara administratör och påstår att barnets konto håller på att raderas om de inte loggar in igen 'omedelbart'."
-            },
-            {
-                "text": "Föräldrar märker ibland inte när något hänt, eftersom barn ofta inte vågar berätta. Kanske för att de skäms, är rädda för att bli av med mobilen, eller helt enkelt inte förstår vad de har varit med om. Därför är det viktigt att du som vuxen har koll - och vågar prata om det som känns svårt."
-            },
-            {
-                "subtitle": "Vad behöver barn veta - och hur pratar man om det?",
-                "text": "Du behöver inte vara tekniskt kunnig för att göra stor skillnad. Det räcker ofta med enkla samtal i vardagen. Berätta att riktiga företag aldrig ber om lösenord via chatt. Förklara att det är bättre att fråga en vuxen en gång för mycket än en gång för lite. Och framför allt - gör klart att det inte är barnets fel om de blir lurade."
-            },
-            {
-                "text": "Ett bra sätt att börja samtalet är att visa ett misstänkt SMS eller mejl du själv fått. Fråga vad barnet tycker verkar märkligt. Ser webbadressen konstig ut? Är språket dåligt? Låter det för bra för att vara sant? På så sätt bygger du en vana hos barnet att vara uppmärksam och ifrågasätta."
-            },
-            {
-                "subtitle": "Vad kan du som förälder göra direkt?",
-                "text": "Det finns flera enkla saker du kan göra idag för att minska risken för att ditt barn utsätts för phishing. Börja med att slå på tvåstegsverifiering på barnets viktiga konton - det är ett extra skydd om någon försöker ta sig in. Gå också igenom vilka appar barnet använder, och se till att ni tillsammans förstår hur de fungerar."
-            },
-            {
-                "text": "Men det viktigaste är kanske ändå relationen. Ett barn som känner att det är okej att komma till dig - även när något gått fel - har ett betydligt bättre skydd än vilket virusprogram som helst. Du är inte bara en förälder, du är också barnets bästa brandvägg."
-            },
-            {
-                "subtitle": "Sammanfattning",
-                "text": "Phishing är en av de vanligaste hoten på nätet, och barn är en särskilt utsatt grupp. Genom att prata öppet, visa intresse och ge barnet strategier för att känna igen bedrägeriförsök, bygger du ett skydd som räcker långt. Det behöver inte vara komplicerat - men det kräver att du vågar vara nyfiken på vad som händer bakom skärmen."
-            },
-            {
-                "text": "Föräldrar märker ibland inte när något hänt, eftersom barn ofta inte vågar berätta. Kanske för att de skäms, är rädda för att bli av med mobilen, eller helt enkelt inte förstår vad de har varit med om. Därför är det viktigt att du som vuxen har koll - och vågar prata om det som känns svårt."
             }
         ],
         "quiz": [

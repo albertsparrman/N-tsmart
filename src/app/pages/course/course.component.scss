@@ -6,9 +6,13 @@ header {
     background-color: #E8E0DE;
     width: 100%;
     margin-left: -50%;
-    padding: 4rem 50% 1rem 50%;
+    padding: 5rem 50% 0rem 50%;
     border-radius: 0 0 50% 50%;
     overflow: hidden;
+}
+
+.light-text {
+    color: var(--color-light-text);
 }
 
 .header-container {
@@ -18,23 +22,25 @@ header {
 
 .title {
     padding-top: 10rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 .background-image {
-    background-position: bottom right;
+    background-position: bottom right 6rem;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 50%;
 }
 
 h1 {
     display: inline;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    padding: 0.2rem 0.8rem;
+    margin-left: -0.8rem;
+    border-radius: var(--border-radius-small);
 }
 
 .time {
-    margin-top: 0.8rem;
+    margin-top: 0.6rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -44,35 +50,37 @@ h1 {
     width: 1.5rem;
 }
 
-@media (max-width: 848px) {
+@media (max-width: 980px) {
+
     h1 {
-        font-size: 1.8rem;
-    }
-
-    .header {
-        padding: 0rem 50% 1rem 50%;
-    }
-
-
-}
-
-@media (max-width: 648px) {
-    .background-image {
-        width: 100%;
-        height: 15rem;
-        background-position: bottom center;
-    }
-
-    .title {
-        padding-top: 2rem;
-        padding-bottom: 3rem;
+        font-size: 2rem;
     }
 
     .header {
         padding: 0rem 50% 0rem 50%;
     }
 
-    .header-container {
-        flex-direction: column-reverse;
+
+}
+
+@media (max-width: 748px) {
+    .background-image {
+        background-position: top 0rem center;
+        background-size: 15rem;
+        background-repeat: no-repeat;
     }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .title {
+        padding-top: 15rem;
+        padding-bottom: 4rem;
+    }
+
+    .header {
+        padding: 0rem 50% 0rem 50%;
+    }
+
 }

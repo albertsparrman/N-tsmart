@@ -1,10 +1,13 @@
 <header>
-    <div *ngIf="id && coursesData" [style.backgroundColor]="coursesData[id].backgroundColor" ngClass="header">
-        <div ngClass="header-container inner-container">
+    <div *ngIf="id && coursesData" [style.backgroundColor]="coursesData[id].backgroundColor" [ngClass]="{'header': true, 'light-text': coursesData[id].foregroundLight}">
+        <div *ngIf="coursesData[id].imageUrl"
+                [style.backgroundImage]="'url(../../../assets/images/'+coursesData[id].imageUrl+')'"
+                ngClass=""ngClass="header-container inner-container background-image">
             <div ngClass="title">
-                <h1>{{ coursesData[id].name }}</h1>
+                <h1 [style.backgroundColor]="coursesData[id].backgroundColor">{{ coursesData[id].name }}</h1>
                 <div ngClass="time">
-                    <img ngClass="time-icon" src="../../../assets/icons/clock.svg" alt="">
+                    <img *ngIf="!coursesData[id].foregroundLight" ngClass="time-icon" src="../../../assets/icons/clock.svg" alt="">
+                    <img *ngIf="coursesData[id].foregroundLight" ngClass="time-icon" src="../../../assets/icons/clockLight.svg" alt="">
                     <p>{{ coursesData[id].time }} min</p>
                 </div>
             </div>

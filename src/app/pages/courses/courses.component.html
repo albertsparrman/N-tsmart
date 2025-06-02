@@ -61,7 +61,7 @@
             <h3>Kurser för dig som har barn mellan 3-6 år</h3>
             <div ngClass="courses-grid">
                 <ng-container *ngFor="let course of coursesData">
-                    <div *ngIf="coursesData[course.id].age == '3-6'">
+                    <div *ngIf="coursesData[course.id].ageGroup.threeToSix == true">
                         <app-course-card [courseId]="course.id"></app-course-card>
                     </div>
                 </ng-container>
@@ -72,7 +72,7 @@
             <h3>Kurser för dig som har barn mellan 7-10 år</h3>
             <div ngClass="courses-grid">
                 <ng-container *ngFor="let course of coursesData">
-                    <div *ngIf="coursesData[course.id].age == '7-10'">
+                    <div *ngIf="coursesData[course.id].ageGroup.sevenToTen == true">
                         <app-course-card [courseId]="course.id"></app-course-card>
                     </div>
                 </ng-container>
@@ -83,7 +83,7 @@
             <h3>Kurser för dig som har barn mellan 11-14 år</h3>
             <div ngClass="courses-grid">
                 <ng-container *ngFor="let course of coursesData">
-                    <div *ngIf="coursesData[course.id].age == '11-14'">
+                    <div *ngIf="coursesData[course.id].ageGroup.elevenToFourteen == true">
                         <app-course-card [courseId]="course.id"></app-course-card>
                     </div>
                 </ng-container>
@@ -94,7 +94,7 @@
             <h3>Kurser för dig som har barn mellan 15-17 år</h3>
             <div ngClass="courses-grid">
                 <ng-container *ngFor="let course of coursesData">
-                    <div *ngIf="coursesData[course.id].age == '15-17'">
+                    <div *ngIf="coursesData[course.id].ageGroup.fifteenToSeventeen== true">
                         <app-course-card [courseId]="course.id"></app-course-card>
                     </div>
                 </ng-container>

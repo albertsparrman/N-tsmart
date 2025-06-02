@@ -86,7 +86,6 @@ export class QuizComponent implements OnInit {
   }
 
   confetti() {
-    console.log("ha");
     this.jsConfetti.addConfetti()
 
   }
