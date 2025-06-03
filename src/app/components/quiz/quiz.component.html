@@ -30,8 +30,11 @@
             <p>{{ coursesData[quizId].quiz[quizSection].quizAnswer }}</p>
         </div>
         <div ngClass="center">
-            <button ngClass="button" (click)="nextQuestion(optionsSection)" *ngIf="quizLocked">
+            <button *ngIf="quizSection < coursesData[quizId].quiz.length - 1 && quizLocked" ngClass="button" (click)="nextQuestion(optionsSection)">
                 Nästa fråga
+            </button>
+            <button *ngIf="quizSection == coursesData[quizId].quiz.length - 1 && quizLocked" ngClass="button" (click)="nextQuestion(optionsSection)">
+                Avsluta quiz
             </button>
         </div>
     </div>
