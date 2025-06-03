@@ -9,7 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [ CourseCardComponent, CommonModule, FormsModule, HttpClientModule],
+  imports: [CourseCardComponent, CommonModule, FormsModule, HttpClientModule],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
 })
@@ -21,7 +21,7 @@ export class CoursesComponent implements OnInit {
   elevenToFourteen: boolean = false
   fifteenToSeventeen: boolean = false
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
 
   ngOnInit() {
@@ -33,15 +33,28 @@ export class CoursesComponent implements OnInit {
   selectAgeInput(age: string) {
     if (age == "threeToSix") {
       this.threeToSix = !this.threeToSix
+      this.sevenToTen = false
+      this.elevenToFourteen = false
+      this.fifteenToSeventeen = false
     }
     else if (age == "sevenToTen") {
       this.sevenToTen = !this.sevenToTen
+      this.threeToSix = false
+      this.elevenToFourteen = false
+      this.fifteenToSeventeen = false
     }
     else if (age == "elevenToFourteen") {
       this.elevenToFourteen = !this.elevenToFourteen
+      this.threeToSix = false
+      this.sevenToTen = false
+
+      this.fifteenToSeventeen = false
     }
     else if (age == "fifteenToSeventeen") {
       this.fifteenToSeventeen = !this.fifteenToSeventeen
+      this.threeToSix = false
+      this.sevenToTen = false
+      this.elevenToFourteen = false
     }
   }
 }
