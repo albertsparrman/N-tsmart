@@ -40,6 +40,16 @@ footer {
     padding: 2rem 0;
 }
 
+.footer-bottom img {    
+    width: 2rem;
+}
+
+.footer-bottom-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 @media (max-width: 600px) {
     .footer-links {
         flex-direction: column;
